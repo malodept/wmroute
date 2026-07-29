@@ -1,0 +1,39 @@
+{
+  "candidate_minus_random_draw_mean": -0.0035928410966814517,
+  "draw_ci95_high": -0.0034568132863108158,
+  "draw_ci95_low": -0.0037275969074240414,
+  "included_in_familywise_inference": false,
+  "interpretation": "descriptive matched-count random-input benchmark; not a permutation or randomization-test p-value",
+  "plus_one_benchmark_tail_fraction": 0.0001999600079984003,
+  "repetitions": 5000,
+  "seed": 10604,
+  "seedwise": [
+    {
+      "audit_rows": 62400,
+      "candidate_minus_random_draw_mean": -0.0036529578340642743,
+      "draw_ci95_high": -0.003422648771074847,
+      "draw_ci95_low": -0.0038909928908677474,
+      "escalation_rate": 0.39520833333333333,
+      "exact_escalation_count": 24661,
+      "upstream_model_seed": 92002
+    },
+    {
+      "audit_rows": 62400,
+      "candidate_minus_random_draw_mean": -0.00364594446200358,
+      "draw_ci95_high": -0.003424351305437545,
+      "draw_ci95_low": -0.003876593070783225,
+      "escalation_rate": 0.4657051282051282,
+      "exact_escalation_count": 29060,
+      "upstream_model_seed": 2026
+    },
+    {
+      "audit_rows": 62400,
+      "candidate_minus_random_draw_mean": -0.0034796209939765006,
+      "draw_ci95_high": -0.0032518637921736334,
+      "draw_ci95_low": -0.003714444067236351,
+      "escalation_rate": 0.39939102564102563,
+      "exact_escalation_count": 24922,
+      "upstream_model_seed": 314159
+    }
+  ]
+}

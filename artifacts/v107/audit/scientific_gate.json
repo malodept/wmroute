@@ -1,0 +1,18 @@
+{
+  "aggregate_point": -0.0025493366853158186,
+  "aggregate_point_negative": true,
+  "checkpoint_pair_points": {
+    "2026": -0.002428164209938957,
+    "314159": -0.002540063197624237,
+    "92002": -0.002679782648384262
+  },
+  "each_checkpoint_pair_point_negative": true,
+  "lambda": 0.002,
+  "one_sided_95_upper": -0.002286383099371905,
+  "one_sided_95_upper_below_zero": true,
+  "primary_comparison": "prediction_minus_dino_action_pca43",
+  "primary_gate_pass": true,
+  "state_clustered_ci95_high": -0.002238474267725135,
+  "state_clustered_ci95_low": -0.0028669004993478442,
+  "status": "V107_PRIMARY_GATE_EVALUATED"
+}

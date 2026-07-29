@@ -1,0 +1,6 @@
+candidate,reference,lambda,latency_sensitivity,cost_difference_candidate_minus_reference,state_clustered_ci95_low,state_clustered_ci95_high,bonferroni_adjusted_one_sided_upper,adjusted_upper_below_zero
+PushT prediction-interface sequential router,Fixed Medium,0.002,measured_overheads_p90,-0.004285692007507719,-0.0047405142536994975,-0.003843742582018247,-0.003769870174146249,True
+PushT prediction-interface sequential router,Fixed Full,0.002,measured_overheads_p90,-0.00255497627403132,-0.002975283214982367,-0.0021418791745452873,-0.002069584225815325,True
+PushT prediction-interface sequential router,Task-only input router,0.002,measured_overheads_p90,-0.0025991789256604074,-0.0030158673428880294,-0.0021889745595749925,-0.0021066956858511723,True
+PushT prediction-interface sequential router,Margin sequential matched-rate,0.002,measured_overheads_p90,-0.0032736576647156112,-0.0036284649084566117,-0.002925132859802722,-0.0028589537921689333,True
+PushT prediction-interface sequential router,Expected random input matched-rate,0.002,measured_overheads_p90,-0.0035691288277851347,-0.0038671771538297574,-0.0032783594769126346,-0.00322584080989698,True

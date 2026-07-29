@@ -1,0 +1,13 @@
+capacity_seed,candidate,reference,lambda,bank_balanced_cost_difference,banks_with_negative_point_estimate,banks
+2026,Prediction-interface sequential router,Fixed Medium,0.002,-0.003383093533319595,6,6
+2026,Prediction-interface sequential router,Fixed Full,0.002,-0.0037692912152792863,6,6
+2026,Prediction-interface sequential router,Margin sequential matched-rate,0.002,-0.002878109222824306,4,6
+2026,Prediction-interface sequential router,Random input matched-rate,0.002,-0.0034291808219010147,6,6
+92002,Prediction-interface sequential router,Fixed Medium,0.002,-0.004397683909066331,6,6
+92002,Prediction-interface sequential router,Fixed Full,0.002,-0.003105963499415915,5,6
+92002,Prediction-interface sequential router,Margin sequential matched-rate,0.002,-0.0026792087668542097,4,6
+92002,Prediction-interface sequential router,Random input matched-rate,0.002,-0.0041228369327945625,6,6
+314159,Prediction-interface sequential router,Fixed Medium,0.002,-0.003251110912643676,6,6
+314159,Prediction-interface sequential router,Fixed Full,0.002,-0.004363688082576243,6,6
+314159,Prediction-interface sequential router,Margin sequential matched-rate,0.002,-0.002842046832205377,4,6
+314159,Prediction-interface sequential router,Random input matched-rate,0.002,-0.003453154098143863,6,6

@@ -1,0 +1,10 @@
+\begin{tabular}{llllr}
+\toprule
+Evaluation & Capacity & Architecture & Parameters & Router interface \\
+\midrule
+PushT & Medium & residual MLP 256$\times$2 & 99,392 & 65-D \\
+PushT & Full & residual MLP 512$\times$3 & 592,448 & not exposed \\
+Controlled PyBullet & Medium & DeltaTransformer 192/4/2 & 1,041,792 & 59-D \\
+Controlled PyBullet & Full & DeltaTransformer 384/6/3 & 5,627,136 & not exposed \\
+\bottomrule
+\end{tabular}

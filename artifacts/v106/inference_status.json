@@ -1,0 +1,12 @@
+{
+  "active_secondary_valid_for_sensitivity": true,
+  "crossed_sensitivity_semantics": "empirical quantiles over the observed three-checkpoint distribution; not population confidence intervals",
+  "float_semantics": "numpy_float32 with strict score > threshold",
+  "historical_executed_source_notice": "../../experiments/v106_pusht/frozen_source/INFERENCE_STATUS.json",
+  "historical_invalid_secondary": "provenance/v106/original_compact_artifacts/global_primary_bootstrap.csv",
+  "historical_secondary_valid_for_inference": false,
+  "matched_count_benchmark_inferential": false,
+  "primary": "global_primary_bootstrap.csv",
+  "primary_seed_treatment": "three fixed equally weighted checkpoints",
+  "secondary_crossed_sensitivity": "repaired_inference/crossed_seed_state_sensitivity.csv"
+}

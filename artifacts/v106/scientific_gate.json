@@ -1,0 +1,11 @@
+{
+  "benchmark_is_inferential_gate": false,
+  "crossed_sensitivity_population_confidence_interval": false,
+  "global_primary_pass": true,
+  "matched_count_benchmark_descriptive_pass": true,
+  "overall_frozen_audit_criteria_pass": true,
+  "primary_adjusted_upper_bounds_below_zero": true,
+  "seed_replication_pass": true,
+  "simultaneous_interpretation": "approximate under the stated physical-state cluster-sampling model",
+  "weight_profile_robustness_pass": true
+}

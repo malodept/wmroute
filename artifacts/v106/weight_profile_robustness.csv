@@ -1,0 +1,10 @@
+weight_profile,candidate,reference,lambda,cost_difference_candidate_minus_reference,state_clustered_ci95_low,state_clustered_ci95_high,bonferroni_adjusted_one_sided_upper,candidate_lower_than_reference_q975,candidate_higher_than_reference_q025,bootstrap_repetitions
+balanced,PushT prediction-interface sequential router,Fixed Medium,0.002,-0.0034907730933312494,-0.0039054952188067415,-0.0030837249435837336,-0.0030837249435837336,True,False,20000
+balanced,PushT prediction-interface sequential router,Expected random input matched-rate,0.002,-0.002910360519715416,-0.003187378226296641,-0.002633343206975509,-0.002633343206975509,True,False,20000
+position,PushT prediction-interface sequential router,Fixed Medium,0.002,-0.0015731784509261677,-0.0018352044926251605,-0.0013171647258809038,-0.0013171647258809038,True,False,20000
+position,PushT prediction-interface sequential router,Expected random input matched-rate,0.002,-0.001154434406187617,-0.001326902539900425,-0.00098437381793664,-0.00098437381793664,True,False,20000
+orientation,PushT prediction-interface sequential router,Fixed Medium,0.002,-0.007859006660765742,-0.008792946677437994,-0.006925393171060944,-0.006925393171060944,True,False,20000
+orientation,PushT prediction-interface sequential router,Expected random input matched-rate,0.002,-0.006708473739952372,-0.007324279582194952,-0.006098536907675336,-0.006098536907675336,True,False,20000
+balanced,PushT prediction-interface sequential router,Fixed Full,0.002,-0.0021051427984993772,-0.0024799824027065534,-0.0017300220012037434,-0.0017300220012037434,True,False,20000
+position,PushT prediction-interface sequential router,Fixed Full,0.002,-0.0006006995279312832,-0.000857222557879117,-0.00034606811562461675,-0.00034606811562461675,True,False,20000
+orientation,PushT prediction-interface sequential router,Fixed Full,0.002,-0.005024968051757009,-0.005903242054603163,-0.0041610832961031284,-0.0041610832961031284,True,False,20000

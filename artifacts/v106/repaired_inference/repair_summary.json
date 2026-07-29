@@ -1,0 +1,15 @@
+{
+  "base_seed": 10603,
+  "input": "/mnt/data/phase1_v3_work/repo_v3/artifacts/v106/per_state_primary.csv",
+  "interpretation": "empirical 2.5%-97.5% crossed seed/state sensitivity quantiles over the observed three-checkpoint distribution; not confidence coverage for a broader training-run population",
+  "model_seeds": [
+    2026,
+    92002,
+    314159
+  ],
+  "repetitions": 20000,
+  "state_resampling": "one shared physical-state index vector per replicate across every sampled model-seed position",
+  "states": 1600,
+  "status": "V106_POST_AUDIT_CROSSED_SENSITIVITY_COMPLETE",
+  "upper_quantile": 0.99
+}

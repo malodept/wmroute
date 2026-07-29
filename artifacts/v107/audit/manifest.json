@@ -1,0 +1,22 @@
+{
+  "confirmation_manifest_sha256": "07f0bf77fcb83070df5b0420e1dc9ae895ce33bbab5ce3953ab6d64ec01901f6",
+  "fresh_input_shards": 2,
+  "fresh_states": 1600,
+  "input_lineage_sha256": "af44258d7eceb9fdf22a9617b67d1e73a0ae5c5e056c5a65829dea604f47b324",
+  "output_hashes": {
+    "arrays/v107_primary_confirmation_arrays.npz": "63c1db585b7798754c9b1879b9b76c7dc8478dfa96a522626817b69d6624abf1",
+    "claims_guardrail.md": "6a5e4c63a62e078c35ed977fb05138a99e509f747f14226739f6fb993e63ed5b",
+    "input_lineage.csv": "af44258d7eceb9fdf22a9617b67d1e73a0ae5c5e056c5a65829dea604f47b324",
+    "per_state_primary.csv": "b82627e448f6c91095c38bb6fe5eb49620c64f7f9641f809e3845b3186243b36",
+    "policy_metrics.csv": "b251cfc1c919d3dca7d04373bf4309e079880a9136f9173b7594e3b39ddad174",
+    "price_sensitivity.csv": "1ecc90468cbc6b58960b385122fd93b255d4b1f1ec45ec33ddec139df0d70ba5",
+    "primary_bootstrap.csv": "610db692577165d0301efff91375a426e4c7be035898975a217d262d9aeea7eb",
+    "scientific_gate.json": "a080b3a8e0e1c47facc7e2890b3ffe13ec8c1f7aa04945fdb5bc9a764e97c686",
+    "score_implementation_diagnostics.csv": "2891a6595bf86d002a7e50eca183f7df732170e239d3cb09b7277bf1b5dd2e93",
+    "seedwise_primary.csv": "2324ea507ec1e168420e6a6745e3c02381a81b5caad737034e74d4bc80ce88ae",
+    "summary.json": "31b3b4b1bb274c2c211648b65ff5715f60938635e34b8e1f307660b59964316a"
+  },
+  "primary_gate_pass": true,
+  "protocol_sha256": "6374d4bfdb0cf206be022415a01d86dc63733da12ef05f2e2e14fa7ae515aca3",
+  "status": "V107_FRESH_CONFIRMATION_AUDIT_COMPLETE"
+}

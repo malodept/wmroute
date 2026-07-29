@@ -1,0 +1,9 @@
+{
+  "active_crossed_sensitivity": "repaired_inference/global_crossed_seed_state_sensitivity.csv",
+  "active_primary": "repaired_inference/global_primary_fixed_seed_state_clustered.csv",
+  "crossed_sensitivity_semantics": "empirical quantiles over the observed three-checkpoint distribution; not population confidence intervals",
+  "deprecated_original": "deprecated_original_inference/",
+  "model_seeds_in_primary": "fixed equally weighted checkpoints",
+  "tasks_and_banks": "fixed finite weighted design",
+  "valid_for_paper_facing_inference": true
+}

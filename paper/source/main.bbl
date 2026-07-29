@@ -1,0 +1,171 @@
+\begin{thebibliography}{23}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Banerjee and Mont{\'u}far(2018)]{banerjee2018variational}
+Pradeep~Kr. Banerjee and Guido Mont{\'u}far.
+\newblock The variational deficiency bottleneck.
+\newblock \emph{arXiv preprint arXiv:1810.11677}, 2018.
+\newblock URL \url{https://arxiv.org/abs/1810.11677}.
+
+\bibitem[Blackwell(1953)]{blackwell1953equivalent}
+David Blackwell.
+\newblock Equivalent comparisons of experiments.
+\newblock \emph{The Annals of Mathematical Statistics}, 24\penalty0
+  (2):\penalty0 265--272, 1953.
+
+\bibitem[Bolukbasi et~al.(2017)Bolukbasi, Wang, Dekel, and
+  Saligrama]{bolukbasi2017adaptive}
+Tolga Bolukbasi, Joseph Wang, Ofer Dekel, and Venkatesh Saligrama.
+\newblock Adaptive neural networks for efficient inference.
+\newblock In \emph{Proceedings of the 34th International Conference on Machine
+  Learning}, volume~70, pages 527--536, 2017.
+\newblock URL \url{https://proceedings.mlr.press/v70/bolukbasi17a.html}.
+
+\bibitem[Cai et~al.(2026)Cai, Ling, Chu, Liu, Kang, Liang, Xu, Mao, Zhang,
+  Yang, Ying, Zheng, and Mu]{cai2026ahawam}
+Jisong Cai, Long Ling, Shiwei Chu, Zhongshan Liu, Jiayue Kang, Zhixuan Liang,
+  Wenjie Xu, Yinan Mao, Weinan Zhang, Xiaokang Yang, Ru~Ying, Ran Zheng, and
+  Yao Mu.
+\newblock {AHA-WAM}: Asynchronous horizon-adaptive world-action modeling with
+  observation-guided context routing.
+\newblock \emph{arXiv preprint arXiv:2606.09811}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2606.09811}.
+
+\bibitem[Jitkrittum et~al.(2023)Jitkrittum, Gupta, Menon, Narasimhan, Rawat,
+  and Kumar]{jitkrittum2023confidence}
+Wittawat Jitkrittum, Neha Gupta, Aditya~K. Menon, Harikrishna Narasimhan, Ankit
+  Rawat, and Sanjiv Kumar.
+\newblock When does confidence-based cascade deferral suffice?
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~36, 2023.
+
+\bibitem[Le~Cam and Yang(2000)]{lecam2000asymptotics}
+Lucien Le~Cam and Grace~Lo Yang.
+\newblock \emph{Asymptotics in Statistics: Some Basic Concepts}.
+\newblock Springer, 2 edition, 2000.
+
+\bibitem[Mozannar and Sontag(2020)]{mozannar2020consistent}
+Hussein Mozannar and David Sontag.
+\newblock Consistent estimators for learning to defer to an expert.
+\newblock In \emph{Proceedings of the 37th International Conference on Machine
+  Learning}, 2020.
+
+\bibitem[Narasimhan et~al.(2022)]{narasimhan2022posthoc}
+Harikrishna Narasimhan et~al.
+\newblock Post-hoc estimators for learning to defer to an expert.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2022.
+
+\bibitem[Oquab et~al.(2024)Oquab, Darcet, Moutakanni, Vo, Szafraniec, Khalidov,
+  Fernandez, Haziza, Massa, El-Nouby, et~al.]{ocquab2023dinov2}
+Maxime Oquab, Timoth{\'e}e Darcet, Th{\'e}o Moutakanni, Huy Vo, Marc
+  Szafraniec, Vasil Khalidov, Pierre Fernandez, Daniel Haziza, Francisco Massa,
+  Alaa El-Nouby, et~al.
+\newblock {DINOv2}: Learning robust visual features without supervision.
+\newblock \emph{Transactions on Machine Learning Research}, 2024.
+
+\bibitem[Regol et~al.(2025)Regol, Cotnareanu, Glavas, and
+  Coates]{regol2025acquisition}
+Florence Regol, Joseph Cotnareanu, Theodore Glavas, and Mark Coates.
+\newblock Is the acquisition worth the cost? surrogate losses for consistent
+  two-stage classifiers.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~38, 2025.
+
+\bibitem[Russell and Wefald(1991)]{russell1991principles}
+Stuart Russell and Eric Wefald.
+\newblock \emph{Do the Right Thing: Studies in Limited Rationality}.
+\newblock MIT Press, 1991.
+
+\bibitem[Seo et~al.(2026)Seo, Kim, and Kwak]{seo2026acid}
+Gawon Seo, Dongwon Kim, and Suha Kwak.
+\newblock {ACID}: Action consistency via inverse dynamics for planning with
+  world models.
+\newblock \emph{arXiv preprint arXiv:2607.02403}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2607.02403}.
+
+\bibitem[Sivasankar(2026)]{sivasankar2026adaptive}
+Achyuthan Sivasankar.
+\newblock Adaptive compute in latent world models: When depth helps, hurts, or
+  doesn't matter.
+\newblock \emph{arXiv preprint arXiv:2607.10203}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2607.10203}.
+
+\bibitem[Sun et~al.(2026)Sun, Zhuge, Liu, Gu, Bing, Gan, and
+  Tian]{sun2026sants}
+Yirui Sun, Guangyu Zhuge, Keliang Liu, Jie Gu, Xinyu Bing, Zhongxue Gan, and
+  Chunxu Tian.
+\newblock {SANTS}: A state-adaptive scheduler for world action models.
+\newblock \emph{arXiv preprint arXiv:2605.27947}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2605.27947}.
+
+\bibitem[van Rooyen and Williamson(2014)]{vanrooyen2014lecam}
+Brendan van Rooyen and Robert~C. Williamson.
+\newblock Le cam meets lecun: Deficiency and generic feature learning.
+\newblock \emph{arXiv preprint arXiv:1402.4884}, 2014.
+\newblock URL \url{https://arxiv.org/abs/1402.4884}.
+
+\bibitem[Vasilyev et~al.(2026)Vasilyev, Wang, Li, and
+  Chen]{vasilyev2026conditional}
+Andrey Vasilyev, Yikai Wang, Xiaocheng Li, and Guanting Chen.
+\newblock Calibrating conditional risk.
+\newblock \emph{arXiv preprint arXiv:2604.20409}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2604.20409}.
+
+\bibitem[Wang et~al.(2026)Wang, Zhang, Lin, Luo, Wang, Wang, and
+  Qi]{wang2026imagination}
+Rui Wang, Yue Zhang, Jiehong Lin, Kuncheng Luo, Jianan Wang, Zhongrui Wang, and
+  Xiaojuan Qi.
+\newblock When to trust imagination: Adaptive action execution for world action
+  models.
+\newblock \emph{arXiv preprint arXiv:2605.06222}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2605.06222}.
+
+\bibitem[Wilder et~al.(2019)Wilder, Dilkina, and Tambe]{wilder2019melding}
+Bryan Wilder, Bistra Dilkina, and Milind Tambe.
+\newblock Melding the data-decisions pipeline: Decision-focused learning for
+  combinatorial optimization.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, 2019.
+
+\bibitem[Yuan et~al.(2026)Yuan, Dong, Liu, and Zhao]{yuan2026fastwam}
+Tianyuan Yuan, Zibin Dong, Yicheng Liu, and Hang Zhao.
+\newblock {Fast-WAM}: Do world action models need test-time future imagination?
+\newblock \emph{arXiv preprint arXiv:2603.16666}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2603.16666}.
+
+\bibitem[Zhao and Ermon(2021)]{zhao2021right}
+Shengjia Zhao and Stefano Ermon.
+\newblock Right decisions from wrong predictions: A mechanism design
+  alternative to individual calibration.
+\newblock In \emph{Proceedings of the 24th International Conference on
+  Artificial Intelligence and Statistics}, volume 130, pages 2683--2691, 2021.
+
+\bibitem[Zhao et~al.(2021)Zhao, Kim, Sahoo, Ma, and Ermon]{zhao2021calibrating}
+Shengjia Zhao, Michael Kim, Roshni Sahoo, Tengyu Ma, and Stefano Ermon.
+\newblock Calibrating predictions to decisions: A novel approach to multi-class
+  calibration.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2021.
+
+\bibitem[Zhao et~al.(2026)Zhao, Cho, Shen, Zheng, Gao, Cao, and
+  Mao]{zhao2026geometric}
+Zesen Zhao, Minkyoung Cho, Hui Shen, Boyuan Zheng, Kunxiao Gao, Yulong Cao, and
+  Z.~Morley Mao.
+\newblock Test-time scaling for world action models via zero-shot geometric
+  verification.
+\newblock \emph{arXiv preprint arXiv:2607.17454}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2607.17454}.
+
+\bibitem[Zhou et~al.(2025)Zhou, Pan, LeCun, and Pinto]{zhou2024dinowm}
+Gaoyue Zhou, Hengkai Pan, Yann LeCun, and Lerrel Pinto.
+\newblock {DINO-WM}: World models on pre-trained visual features enable
+  zero-shot planning.
+\newblock In \emph{Proceedings of the 42nd International Conference on Machine
+  Learning}, volume 267 of \emph{Proceedings of Machine Learning Research},
+  pages 79115--79135, 2025.
+\newblock URL \url{https://proceedings.mlr.press/v267/zhou25t.html}.
+
+\end{thebibliography}

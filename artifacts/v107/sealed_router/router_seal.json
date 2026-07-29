@@ -1,0 +1,42 @@
+{
+  "output_hashes_before_router_seal": {
+    "development_input_lineage.csv": "1b46bec4bbc5c4f4dd81975805345b180470bd393d7d77c95b3b968cf77d7731",
+    "dino_action_pca43_projection.joblib": "4e5f00def8ed1fa92be2bf83a6ea2470cc821796e86f8d1c8f0362a65c5473c5",
+    "feature_names.csv": "65aebc9a11cb8fc6df306b6f57ea723a27b7b99f05629b1e506c3c38c057b5d8",
+    "latency_components.csv": "1f9b0da7224c8ca9ba4ddec569f1d3365a399eee39a563aa1420c92971844328",
+    "models.csv": "546115f64673af3eb7c9d0417e6685128334b3e354db75c8647614f4b341099d",
+    "models/dino_action_pca43_seed2026.joblib": "9ef6e98d843ae97613f5f5097dcbd7172b1220509dffd4263f903d5cdb18818d",
+    "models/dino_action_pca43_seed314159.joblib": "3388a1553517fb0fd4bd7909d0bf65c8b5535f4dccdcd137d1aa602bffeb6e6a",
+    "models/dino_action_pca43_seed92002.joblib": "ad267ba894c6f4f130a4068c155fcb1edfa9e046e909892af3c326859a238484",
+    "models/prediction_seed2026.joblib": "b23ca2e2d6f32f72aadac195d066bf944055a189488d37002fff1040bc2dcb2d",
+    "models/prediction_seed314159.joblib": "b67f4812e109bd56d894175b1d2c22ce3f5d3b6f752f77d664ae0a8b3c027a58",
+    "models/prediction_seed92002.joblib": "2fa2a61c5e917ace7d4f778f1df1d61c74f51f45592b3a5d53fdc733705070fe",
+    "seal_guardrail.md": "a5e696bbee6d1afff2b5a61582cb3c40116c56c4f46731ca8f69f321492c1050",
+    "thresholds.csv": "d90f8645ec85dfc8eacd3134bd3b84378124d8d6e264b5bf8c5676b145cc4179",
+    "validation_replay.csv": "9da533128a737070933de25847cac84108a783a23582a9fff2e9723d699579dc"
+  },
+  "protocol_sha256": "6374d4bfdb0cf206be022415a01d86dc63733da12ef05f2e2e14fa7ae515aca3",
+  "runtime": {
+    "elapsed_seconds": 19.99722951836884,
+    "hostname": "cpu-001",
+    "numpy": "2.2.6",
+    "omp_num_threads": "1",
+    "platform": "Linux-4.18.0-553.46.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "python": "3.10.20 (main, Jun 23 2026, 15:20:26) [Clang 22.1.3 ]",
+    "scikit_learn": "1.7.2"
+  },
+  "status": "V107_PRIMARY_ROUTERS_SEALED_BEFORE_FRESH_PUSHT_OUTCOMES",
+  "v106_audit_shards_opened_by_freeze": [],
+  "v106_development_shards_opened": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "v107_physical_outcomes_present_at_seal": false,
+  "v107_states_or_rows_used_for_fit_threshold_or_latency": 0
+}

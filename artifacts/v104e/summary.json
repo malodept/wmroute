@@ -1,0 +1,110 @@
+{
+  "bank_names": [
+    "confirm_id_h36_v12_b2",
+    "confirm_h54_v12_b3",
+    "confirm_h96_v12_b3",
+    "confirm_h36_v21_b2",
+    "confirm_h36_v12_b1",
+    "confirm_h60_v15_b3"
+  ],
+  "bank_robustness": [
+    {
+      "banks_with_negative_point_estimate": 6,
+      "banks_with_significant_worsening": 0,
+      "passed": true,
+      "reference": "Fixed Medium"
+    },
+    {
+      "banks_with_negative_point_estimate": 6,
+      "banks_with_significant_worsening": 0,
+      "passed": true,
+      "reference": "Random input matched-rate"
+    }
+  ],
+  "banks": 6,
+  "candidate": {
+    "expected_feature_dimension": 59,
+    "feature_groups": [
+      "task",
+      "prediction",
+      "regime"
+    ],
+    "name": "prediction_interface_sequential",
+    "routing_mode": "sequential",
+    "selection_rule": "Frozen before V104E from the prespecified V104D ablation and the V104D2 readiness audit. No V104E labels may be used for training, threshold selection, feature selection, or hyperparameter selection.",
+    "upstream_v104d_variant": "prediction_only_sequential"
+  },
+  "confirmatory": true,
+  "confirmatory_gates": {
+    "bank_robustness_pass": true,
+    "crossed_seed_state_sensitivity_all_adjusted_upper_bounds_below_zero": true,
+    "fixed_seed_primary_all_adjusted_upper_bounds_below_zero": true,
+    "overall_frozen_audit_criteria_pass": true,
+    "seed_replication_pass": true
+  },
+  "deprecated_original_inference": "deprecated_original_inference/",
+  "global_confirmatory_comparisons": [
+    {
+      "bonferroni_adjusted_percentile_bootstrap_upper_pass": true,
+      "bonferroni_one_sided_upper": -0.0035348171407691056,
+      "bootstrap_replicates": 10000,
+      "candidate": "Prediction-interface sequential router",
+      "ci95_high": -0.003552961609822795,
+      "ci95_low": -0.0038052888057831208,
+      "cost_difference_candidate_minus_reference": -0.0036772961183432215,
+      "lambda": 0.002,
+      "reference": "Fixed Medium"
+    },
+    {
+      "bonferroni_adjusted_percentile_bootstrap_upper_pass": true,
+      "bonferroni_one_sided_upper": -0.003596931846839255,
+      "bootstrap_replicates": 10000,
+      "candidate": "Prediction-interface sequential router",
+      "ci95_high": -0.003612663548373349,
+      "ci95_low": -0.0038802012795448007,
+      "cost_difference_candidate_minus_reference": -0.003746314265757141,
+      "lambda": 0.002,
+      "reference": "Fixed Full"
+    },
+    {
+      "bonferroni_adjusted_percentile_bootstrap_upper_pass": true,
+      "bonferroni_one_sided_upper": -0.002685068801750325,
+      "bootstrap_replicates": 10000,
+      "candidate": "Prediction-interface sequential router",
+      "ci95_high": -0.0026983544923598916,
+      "ci95_low": -0.002902090184563829,
+      "cost_difference_candidate_minus_reference": -0.0027997882739613095,
+      "lambda": 0.002,
+      "reference": "Margin sequential matched-rate"
+    },
+    {
+      "bonferroni_adjusted_percentile_bootstrap_upper_pass": true,
+      "bonferroni_one_sided_upper": -0.0035497434960840646,
+      "bootstrap_replicates": 10000,
+      "candidate": "Prediction-interface sequential router",
+      "ci95_high": -0.0035647977213994673,
+      "ci95_low": -0.0037727268824755424,
+      "cost_difference_candidate_minus_reference": -0.003668390617613133,
+      "lambda": 0.002,
+      "reference": "Random input matched-rate"
+    }
+  ],
+  "historical_execution_status": "V104E_PYBULLET_SEALED_CONFIRMATION_COMPLETE",
+  "inference_interpretation": "Percentile-bootstrap intervals and Bonferroni-adjusted upper bounds are conditional on the fixed task, bank, and three-checkpoint design and on validity of the physical-state cluster bootstrap.",
+  "interpretation_guardrail": "V104E can confirm the frozen prediction-interface router within this controlled PyBullet model/task family. It cannot establish cross-environment, cross-architecture, or universal world-model generality, and its sequential latency must not be described as a compute saving.",
+  "primary_estimand": "Equal-weight mean over the six prespecified confirmation banks and three frozen world-model seeds, after averaging the 81 decision tasks within each physical state.",
+  "primary_lambda": 0.002,
+  "protocol_sha256": "4d5c108aed8e6bf9ef3f01da476abbcb86142cdada8b74a16d2679d90b1a29a2",
+  "sealed_before_outcomes": true,
+  "source_v104d2_protocol_sha256": "229c834cc0edcb26a8ffc40873f0714dc676eb8f8e8ce48b5f64c1dc3e8a6659",
+  "source_v104d_protocol_sha256": "5d8e3ddd2d1a939dcfcf2e8aca6ef424b424a01124037048a39c793fab936ccd",
+  "stage": "confirmation",
+  "states": 12000,
+  "status": "V104E_POST_AUDIT_REPAIRED_INFERENCE_ACTIVE",
+  "tasks": 81,
+  "world_model_seeds": [
+    2026,
+    92002,
+    314159
+  ]
+}

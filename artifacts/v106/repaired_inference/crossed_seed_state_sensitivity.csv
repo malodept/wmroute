@@ -1,0 +1,6 @@
+candidate,reference,lambda,cost_difference_candidate_minus_reference,sensitivity_q025,sensitivity_q975,adjusted_one_sided_upper_quantile,adjusted_upper_below_zero,crossed_state_vector_shared_across_sampled_seeds,sensitivity_repetitions,sensitivity_seed,population_confidence_interval
+PushT prediction-interface sequential router,Fixed Medium,0.002,-0.004307652735007722,-0.0048703908905520735,-0.0037503496324817528,-0.003649722234407057,True,True,20000,10703,False
+PushT prediction-interface sequential router,Fixed Full,0.002,-0.0025769370015313233,-0.00321810433563937,-0.0018910499583723744,-0.0017408403270201644,True,True,20000,10704,False
+PushT prediction-interface sequential router,Task-only input router,0.002,-0.002619876386493738,-0.0032724400688860125,-0.0019369800336445872,-0.00178185891646822,True,True,20000,10705,False
+PushT prediction-interface sequential router,Margin sequential matched-rate,0.002,-0.003294214331382281,-0.003746632830336871,-0.0028591880535248277,-0.002770337524507998,True,True,20000,10706,False
+PushT prediction-interface sequential router,Expected random input matched-rate,0.002,-0.0035910895552851356,-0.00394880682132613,-0.0032385766963386733,-0.0031634349812545283,True,True,20000,10707,False

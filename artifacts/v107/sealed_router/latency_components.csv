@@ -1,0 +1,16 @@
+upstream_model_seed,component,source,convention,median_ms,mean_ms,p90_ms,round_median_min_ms,round_median_max_ms,warmup,repeats_per_round,rounds
+92002,prediction_full_query_router_overhead,measured_during_v107_seal_before_any_v107_outcome,one_state_one_task_five_action_query,0.23144949999999997,0.234083168,0.2431171,0.230568,0.23569600000000002,200,1000,7
+92002,dino_action_pca43_full_query_router_overhead,measured_during_v107_seal_before_any_v107_outcome,one_state_one_task_five_action_query,0.294375,0.30241686199999995,0.3075759,0.290769,0.296798,200,1000,7
+92002,medium_model,inherited_hash_locked_v106,,0.25831256061792374,,,,,,,
+92002,full_model,inherited_hash_locked_v106,,0.3393300576135516,,,,,,,
+92002,decision_single_task,inherited_hash_locked_v106,,0.022074,,,,,,,
+2026,prediction_full_query_router_overhead,measured_during_v107_seal_before_any_v107_outcome,one_state_one_task_five_action_query,0.2337935,0.23579561985714287,0.2448,0.233157,0.234344,200,1000,7
+2026,dino_action_pca43_full_query_router_overhead,measured_during_v107_seal_before_any_v107_outcome,one_state_one_task_five_action_query,0.2937285,0.2976325207142857,0.307174,0.292312,0.294254,200,1000,7
+2026,medium_model,inherited_hash_locked_v106,,0.2592140808701515,,,,,,,
+2026,full_model,inherited_hash_locked_v106,,0.34288596361875534,,,,,,,
+2026,decision_single_task,inherited_hash_locked_v106,,0.021933,,,,,,,
+314159,prediction_full_query_router_overhead,measured_during_v107_seal_before_any_v107_outcome,one_state_one_task_five_action_query,0.232431,0.23447981757142855,0.243037,0.2317455,0.2328265,200,1000,7
+314159,dino_action_pca43_full_query_router_overhead,measured_during_v107_seal_before_any_v107_outcome,one_state_one_task_five_action_query,0.29251099999999997,0.2965304595714286,0.3054329,0.2909395,0.295501,200,1000,7
+314159,medium_model,inherited_hash_locked_v106,,0.260384869761765,,,,,,,
+314159,full_model,inherited_hash_locked_v106,,0.3446829505264759,,,,,,,
+314159,decision_single_task,inherited_hash_locked_v106,,0.021968500000000002,,,,,,,

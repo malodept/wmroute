@@ -1,0 +1,5 @@
+upstream_model_seed,audit_query_task_rows,full_route_count,full_route_rate,lambda
+2026,62400,62400,1.0,0.002
+314159,62400,62400,1.0,0.002
+92002,62400,60800,0.9743589743589743,0.002
+equal_seed_average,187200,185600,0.9914529914529915,0.002

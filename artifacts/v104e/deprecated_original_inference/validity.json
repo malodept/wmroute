@@ -1,0 +1,9 @@
+{
+  "active_replacement": "Bonferroni-adjusted percentile-bootstrap upper bounds with approximate simultaneous interpretation",
+  "historical_familywise_language_valid": false,
+  "point_estimates_affected": false,
+  "reason": "Original cellwise resampling did not preserve shared physical-state pairing across model seeds.",
+  "replacement": "../repaired_inference/",
+  "status": "DEPRECATED_ORIGINAL_V104E_INFERENCE",
+  "valid_for_inference": false
+}

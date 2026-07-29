@@ -1,0 +1,16 @@
+upstream_model_seed,candidate,reference,lambda,cost_difference_candidate_minus_reference,candidate_better_state_rate,reference_better_state_rate,tie_state_rate
+92002,PushT prediction-interface sequential router,Fixed Medium,0.002,-0.004317554509684799,0.57375,0.42625,0.0
+92002,PushT prediction-interface sequential router,Fixed Full,0.002,-0.0026328738436434095,0.543125,0.456875,0.0
+92002,PushT prediction-interface sequential router,Task-only input router,0.002,-0.00266185799853066,0.54375,0.45625,0.0
+92002,PushT prediction-interface sequential router,Margin sequential matched-rate,0.002,-0.003404384441576881,0.596875,0.403125,0.0
+92002,PushT prediction-interface sequential router,Expected random input matched-rate,0.002,-0.0036517546714596883,0.65125,0.34875,0.0
+2026,PushT prediction-interface sequential router,Fixed Medium,0.002,-0.0042272850392799845,0.580625,0.419375,0.0
+2026,PushT prediction-interface sequential router,Fixed Full,0.002,-0.0029750771202832938,0.54875,0.45125,0.0
+2026,PushT prediction-interface sequential router,Task-only input router,0.002,-0.003024875120283294,0.555625,0.444375,0.0
+2026,PushT prediction-interface sequential router,Margin sequential matched-rate,0.002,-0.003295969804425227,0.60625,0.39375,0.0
+2026,PushT prediction-interface sequential router,Expected random input matched-rate,0.002,-0.0036441253898241567,0.648125,0.351875,0.0
+314159,PushT prediction-interface sequential router,Fixed Medium,0.002,-0.00437811865605838,0.581875,0.418125,0.0
+314159,PushT prediction-interface sequential router,Fixed Full,0.002,-0.0021228600406672632,0.520625,0.479375,0.0
+314159,PushT prediction-interface sequential router,Task-only input router,0.002,-0.002172896040667257,0.521875,0.478125,0.0
+314159,PushT prediction-interface sequential router,Margin sequential matched-rate,0.002,-0.0031822887481447342,0.583125,0.416875,0.0
+314159,PushT prediction-interface sequential router,Expected random input matched-rate,0.002,-0.0034773886045715587,0.63375,0.36625,0.0

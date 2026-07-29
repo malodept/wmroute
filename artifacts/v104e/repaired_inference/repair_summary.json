@@ -1,0 +1,34 @@
+{
+  "all_crossed_sensitivity_adjusted_upper_quantiles_below_zero": true,
+  "all_primary_adjusted_upper_bounds_below_zero": true,
+  "banks": [
+    "confirm_id_h36_v12_b2",
+    "confirm_h54_v12_b3",
+    "confirm_h96_v12_b3",
+    "confirm_h36_v21_b2",
+    "confirm_h36_v12_b1",
+    "confirm_h60_v15_b3"
+  ],
+  "bonferroni_upper_quantile": 0.9875,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 104920,
+  "comparisons": [
+    "Fixed Medium",
+    "Fixed Full",
+    "Margin sequential matched-rate",
+    "Random input matched-rate"
+  ],
+  "crossed_rows": 36000,
+  "input": "/mnt/data/phase1_corrected/wmroute-public-repo/artifacts/v104e/row_level/per_state.csv",
+  "model_seeds": [
+    2026,
+    92002,
+    314159
+  ],
+  "physical_states": 12000,
+  "point_estimates_unchanged": true,
+  "primary_method": "fixed-seed state-clustered stratified bootstrap",
+  "sensitivity_interpretation": "empirical quantiles over the observed three-checkpoint distribution; not population confidence intervals",
+  "sensitivity_method": "crossed seed/state bootstrap with shared state indices across seeds",
+  "status": "V104E_PAIRED_INFERENCE_REPAIR_PASS"
+}

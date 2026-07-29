@@ -1,0 +1,189 @@
+{
+  "protocol_name": "v104e_pybullet_sealed_prediction_interface_confirmation",
+  "stage": "confirmation",
+  "confirmatory": true,
+  "sealed_before_outcomes": true,
+  "source_v104c_protocol_sha256": "f5830bed22945492c780e85ffc78ce4fee917f82558d88b9578508f46bdd6a77",
+  "source_v104d_protocol_sha256": "5d8e3ddd2d1a939dcfcf2e8aca6ef424b424a01124037048a39c793fab936ccd",
+  "source_v104d2_protocol_sha256": "229c834cc0edcb26a8ffc40873f0714dc676eb8f8e8ce48b5f64c1dc3e8a6659",
+  "candidate": {
+    "name": "prediction_interface_sequential",
+    "upstream_v104d_variant": "prediction_only_sequential",
+    "feature_groups": [
+      "task",
+      "prediction",
+      "regime"
+    ],
+    "routing_mode": "sequential",
+    "expected_feature_dimension": 59,
+    "selection_rule": "Frozen before V104E from the prespecified V104D ablation and the V104D2 readiness audit. No V104E labels may be used for training, threshold selection, feature selection, or hyperparameter selection."
+  },
+  "banks": [
+    {
+      "name": "confirm_id_h36_v12_b2",
+      "groups": 2000,
+      "horizon": 36,
+      "velocity": 1.2,
+      "num_blocked_directions": 2,
+      "seed": 104901,
+      "shift": "fresh_id_replication"
+    },
+    {
+      "name": "confirm_h54_v12_b3",
+      "groups": 2000,
+      "horizon": 54,
+      "velocity": 1.2,
+      "num_blocked_directions": 3,
+      "seed": 104902,
+      "shift": "unseen_horizon_interpolation"
+    },
+    {
+      "name": "confirm_h96_v12_b3",
+      "groups": 2000,
+      "horizon": 96,
+      "velocity": 1.2,
+      "num_blocked_directions": 3,
+      "seed": 104903,
+      "shift": "unseen_horizon_extrapolation"
+    },
+    {
+      "name": "confirm_h36_v21_b2",
+      "groups": 2000,
+      "horizon": 36,
+      "velocity": 2.1,
+      "num_blocked_directions": 2,
+      "seed": 104904,
+      "shift": "unseen_velocity_extrapolation"
+    },
+    {
+      "name": "confirm_h36_v12_b1",
+      "groups": 2000,
+      "horizon": 36,
+      "velocity": 1.2,
+      "num_blocked_directions": 1,
+      "seed": 104905,
+      "shift": "unseen_obstacle_count"
+    },
+    {
+      "name": "confirm_h60_v15_b3",
+      "groups": 2000,
+      "horizon": 60,
+      "velocity": 1.5,
+      "num_blocked_directions": 3,
+      "seed": 104906,
+      "shift": "unseen_compositional_regime"
+    }
+  ],
+  "development_bank_seeds_forbidden": [
+    104301,
+    104311,
+    104312,
+    104313,
+    104314
+  ],
+  "image_size": 96,
+  "dino_model": "dinov2_vits14",
+  "dino_image_size": 224,
+  "dino_source_grid": 16,
+  "dino_target_grid": 4,
+  "dino_batch_size": 96,
+  "world_model_seeds": [
+    2026,
+    92002,
+    314159
+  ],
+  "primary_lambda": 0.002,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 104920,
+  "random_seed": 104921,
+  "primary_estimand": "Equal-weight mean over the six prespecified confirmation banks and three frozen world-model seeds, after averaging the 81 decision tasks within each physical state.",
+  "primary_references": [
+    "Fixed Medium",
+    "Fixed Full",
+    "Margin sequential matched-rate",
+    "Random input matched-rate"
+  ],
+  "multiple_comparison_control": {
+    "familywise_alpha": 0.05,
+    "method": "Bonferroni one-sided upper percentile bound",
+    "comparisons": 4,
+    "upper_quantile": 0.9875
+  },
+  "frozen_thresholds": {
+    "2026": 0.007222625613212573,
+    "92002": 0.015966734886169443,
+    "314159": 0.015153581649065015
+  },
+  "frozen_latency_ms": {
+    "2026": {
+      "medium_estimator": 0.9042045,
+      "full_estimator": 1.0951745000000002,
+      "task_loss_and_argmin": 0.009815,
+      "candidate_router": 0.226193,
+      "medium_margin": 0.010741500000000001
+    },
+    "92002": {
+      "medium_estimator": 0.896047,
+      "full_estimator": 1.093231,
+      "task_loss_and_argmin": 0.00978,
+      "candidate_router": 0.223178,
+      "medium_margin": 0.0108165
+    },
+    "314159": {
+      "medium_estimator": 0.896148,
+      "full_estimator": 1.091604,
+      "task_loss_and_argmin": 0.009765,
+      "candidate_router": 0.22479100000000002,
+      "medium_margin": 0.010816
+    }
+  },
+  "frozen_candidate_model_sha256": {
+    "2026": "b8d8a1817b3417ae83ceb22c65d642104287791ab24917cda687638c1644db31",
+    "92002": "18de955d8713bde29cb55f53313b4bf22cefc9cd13949ddd8b32355564d381d6",
+    "314159": "734275dbe6c1ae24ae8c9a82a12d5e752a1ef7cea5630acb1a223ae02dc05e44"
+  },
+  "frozen_world_model_checkpoint_sha256": {
+    "Medium": {
+      "2026": "f65f0966f19682b80f83f8a116cf27d1889b9ccc61967a8ccc90933c7a75323a",
+      "92002": "d1a20d1b03e130f55c07fd247ccf8fc5bef139b61ef197fccd0e9b87f1353ba3",
+      "314159": "31d662e5e3af0b2ca9b9f6ea5e211c1e2742b59c90d341dbd8644db0d9ab133a"
+    },
+    "Full": {
+      "2026": "31c944d25504b2ee8ea7f6e8b49f37c460dd0817e4ec068c9023c9c18c5428e6",
+      "92002": "dcafd649c3837eb7758670ba787a60f54b2a789aa6c91706c2358c53886311a2",
+      "314159": "055eef94aa0f3520543234d165a585d01e30b60f5b0b9e5a1d607a6701458c39"
+    }
+  },
+  "frozen_physical_interface_sha256": {
+    "Medium": {
+      "2026": "a5ee0a74167ad7938d2d61819b20be3ec5fa0a56e28706510dd5e6a4eb884d55",
+      "92002": "1372f915966d39793fe429eebcfd1a8f4021ab6aa67be75038c31c801ea5d812",
+      "314159": "8f78fce06fc58cf52218d1d66f068bcfda85887ae19871dab202d119c9a283b0"
+    },
+    "Full": {
+      "2026": "55ad9d3279af2ebcacb924d91a57217716419e4f7b924f7d39b96a1bd2c32d95",
+      "92002": "1ba04a821f6789888a72828b5d0a8583e27363304c8b644a6ca3fcdd2b85b1d7",
+      "314159": "fb91e328ebaf84f4b2d7100ae63d4a0abe2e6ed1b3c3911d11898ae31460d1eb"
+    }
+  },
+  "confirmatory_success_rule": {
+    "global_primary": "All four candidate-minus-reference Bonferroni one-sided upper bounds are below zero.",
+    "seed_replication": "Candidate-minus-reference point estimates are negative for Fixed Medium and Random input matched-rate on all three frozen world-model seeds.",
+    "bank_robustness": "At least four of six banks have negative point estimates and no bank has a two-sided 95% interval entirely above zero, separately against Fixed Medium and Random input matched-rate.",
+    "overall": "All global_primary, seed_replication, and bank_robustness criteria pass."
+  },
+  "forbidden_candidate_inputs": [
+    "current_dino",
+    "state_pca",
+    "state_xy",
+    "future_xy_observed",
+    "blocked_mask",
+    "true_loss",
+    "regret_medium",
+    "regret_full",
+    "oracle_benefit",
+    "full_predicted",
+    "correctness"
+  ],
+  "interpretation_guardrail": "V104E can confirm the frozen prediction-interface router within this controlled PyBullet model/task family. It cannot establish cross-environment, cross-architecture, or universal world-model generality, and its sequential latency must not be described as a compute saving."
+}

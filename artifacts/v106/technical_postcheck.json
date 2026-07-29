@@ -1,0 +1,18 @@
+{
+  "audit_states": 1600,
+  "model_seeds": 3,
+  "primary_comparisons": 5,
+  "protocol_sha256": "0603397fcf3b5209ac2a92a70a334b23c61083b5ff7fc87e5972e52737bf514d",
+  "scientific_gate": {
+    "benchmark_is_inferential_gate": false,
+    "global_primary_pass": true,
+    "matched_count_benchmark_descriptive_pass": true,
+    "overall_frozen_audit_criteria_pass": true,
+    "seed_replication_pass": true,
+    "weight_profile_robustness_pass": true
+  },
+  "scientific_gate_pass": true,
+  "status": "V106_SEALED_CONFIRMATION_POSTCHECK_OK",
+  "tasks": 39,
+  "technical_postcheck_pass": true
+}

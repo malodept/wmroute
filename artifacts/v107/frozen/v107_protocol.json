@@ -1,0 +1,839 @@
+{
+  "candidate": {
+    "expected_feature_dimension": 65,
+    "feature_groups": [
+      "task",
+      "medium_calibrated_prediction"
+    ],
+    "forbidden_inputs": [
+      "state",
+      "state_xy",
+      "future_state",
+      "future_observed",
+      "z_current",
+      "current_dino",
+      "z_future",
+      "true_loss",
+      "oracle_action",
+      "regret_medium",
+      "regret_full",
+      "oracle_benefit",
+      "full_prediction",
+      "full_predicted_loss",
+      "correctness",
+      "coverage",
+      "goal_pose"
+    ],
+    "name": "PushT prediction-interface sequential router",
+    "routing_mode": "sequential"
+  },
+  "claims": {
+    "allowed_if_gate_passes": [
+      "On a fresh sealed PushT bank, a task-and-Medium-prediction router improves decision cost over both fixed world-model choices and three non-learned or task-only routing references at the preregistered compute price.",
+      "The result replicates across all three frozen upstream model seeds and all three preregistered loss-weight profiles."
+    ],
+    "always_forbidden": [
+      "The router saves compute.",
+      "The router is deployment-Pareto optimal.",
+      "The result establishes Blackwell or Le Cam incomparability.",
+      "The result generalizes beyond the frozen five-action PushT bank and restricted 39-task family.",
+      "The calibrated prediction is independent of the current observation.",
+      "Any audit outcome may be used to modify this protocol, models, thresholds, latency accounting, or gate."
+    ]
+  },
+  "code_sha256": {
+    "configs/v107_confirmation_design.json": "df67a167f148ecb0e309114e15021572ab48dfbce4df805381ebcf365c66ed6f",
+    "jobs/run_v107_audit.pbs": "2d5c2f8d70890d3e160c48d20d6cf6c26a96eebcdcdea37cb29462e57be3b1b0",
+    "jobs/run_v107_freeze_confirmation.pbs": "8683d669b690cf96f984719dce42c08095478730f23b573b1ff6d2b040fd28e6",
+    "jobs/run_v107_generate_array.pbs": "2a7d825aec141860c3f0ee19ee5d5cc87edd3002f78bfeba0c51604ee4eb8c75",
+    "jobs/run_v107_infer_array.pbs": "cd003f44702d665e2a6abc728d6f483f4f3142eced7a15ffab7ce98e727862b5",
+    "protocols/V107_CONFIRMATION_PROTOCOL_FINAL.md": "ba66c95426226b12f01cbfd6b2185573b452492850ac0340f308c870148bdec8",
+    "scripts/v107_audit_fresh.py": "5712225b5aeb66240032ceaad64831d4cff270acac0d0b40899923b3e8903369",
+    "scripts/v107_common.py": "ea761e31743ded38316a8cd435a555bfe60b84be9830deb7385959faa209f620",
+    "scripts/v107_freeze_confirmation.py": "8042e4c32abe62d054bf31eac0288e45c3594dbe090a83a7841c0cde7e2bc8a8",
+    "scripts/v107_generate_fresh.py": "d81c41e74ae6069c2ece3ec6075b364c08ee803c2595f90ded56ea8d973fa60f",
+    "scripts/v107_infer_fresh.py": "6847aac375316c41aa33cc435b38456c75268789373dcd66ef0009dbb39eb316",
+    "scripts/v107_postcheck.py": "dbcd8f932dd830e86038d1243d5237649a7296e1acb65e67eff80947c86cc7fd",
+    "scripts/v107_selftest.py": "fae5676550c5101c4366a4c177fada4987106c56d03f6a53285640588c59ff53"
+  },
+  "confirmatory": true,
+  "decision_family": {
+    "coordinates": [
+      "block_dx_over_512",
+      "block_dy_over_512",
+      "wrapped_block_dtheta_over_pi"
+    ],
+    "definition": "sqrt(sum_j weight_j * (delta_j - target_j)^2 / sum_j weight_j)",
+    "targets": [
+      {
+        "name": "zero",
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "east",
+        "value": [
+          0.1,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "west",
+        "value": [
+          -0.1,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "north",
+        "value": [
+          0.0,
+          0.1,
+          0.0
+        ]
+      },
+      {
+        "name": "south",
+        "value": [
+          0.0,
+          -0.1,
+          0.0
+        ]
+      },
+      {
+        "name": "ne",
+        "value": [
+          0.08,
+          0.08,
+          0.0
+        ]
+      },
+      {
+        "name": "nw",
+        "value": [
+          -0.08,
+          0.08,
+          0.0
+        ]
+      },
+      {
+        "name": "se",
+        "value": [
+          0.08,
+          -0.08,
+          0.0
+        ]
+      },
+      {
+        "name": "sw",
+        "value": [
+          -0.08,
+          -0.08,
+          0.0
+        ]
+      },
+      {
+        "name": "rot_pos",
+        "value": [
+          0.0,
+          0.0,
+          0.15
+        ]
+      },
+      {
+        "name": "rot_neg",
+        "value": [
+          0.0,
+          0.0,
+          -0.15
+        ]
+      },
+      {
+        "name": "east_rot",
+        "value": [
+          0.08,
+          0.0,
+          0.15
+        ]
+      },
+      {
+        "name": "west_rot",
+        "value": [
+          -0.08,
+          0.0,
+          -0.15
+        ]
+      }
+    ],
+    "task_count": 39,
+    "tie_tolerance": 1e-12,
+    "weight_profiles": [
+      {
+        "name": "balanced",
+        "value": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "position",
+        "value": [
+          1.0,
+          1.0,
+          0.1
+        ]
+      },
+      {
+        "name": "orientation",
+        "value": [
+          0.25,
+          0.25,
+          2.0
+        ]
+      }
+    ]
+  },
+  "environment": {
+    "candidate_count": 5,
+    "generation_base_seeds": [
+      1510003,
+      1520003,
+      1530003,
+      1540003,
+      1550003,
+      1560003,
+      1570003,
+      1580003,
+      1590003,
+      1600003
+    ],
+    "global_id_offset": 10000000,
+    "horizon": 30,
+    "id": "gym_pusht/PushT-v0",
+    "radius": 80.0,
+    "render_contract": {
+      "action_overlay_included": false,
+      "height": 512,
+      "interface": "PushTEnv._render(visualize=False)",
+      "width": 512
+    },
+    "shards": 10,
+    "states_per_shard": 800,
+    "total_states": 8000
+  },
+  "expected_prepared_shards": [
+    "v106_prepared_shard0.npz",
+    "v106_prepared_shard1.npz",
+    "v106_prepared_shard2.npz",
+    "v106_prepared_shard3.npz",
+    "v106_prepared_shard4.npz",
+    "v106_prepared_shard5.npz",
+    "v106_prepared_shard6.npz",
+    "v106_prepared_shard7.npz",
+    "v106_prepared_shard8.npz",
+    "v106_prepared_shard9.npz"
+  ],
+  "fresh_physical_bank": true,
+  "frozen_calibrators": {
+    "full_seed2026": {
+      "alpha": 1.0,
+      "fit_rows": 900,
+      "fit_states": 180,
+      "path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/calibrators/v101f_frozen_calibrator_full_seed2026.joblib",
+      "sha256": "a6652b9bb0a4df9844bf8eb80991dc0caceee02cd010d6efb3e998aefe338b6b",
+      "source_prediction_sha256": "b0b32b68d781fa656497dd142b76dd55c361cb342c6e7dbcccc3f473c9a4f05a"
+    },
+    "full_seed314159": {
+      "alpha": 1.0,
+      "fit_rows": 900,
+      "fit_states": 180,
+      "path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/calibrators/v101f_frozen_calibrator_full_seed314159.joblib",
+      "sha256": "13d0997befb8998b31291dee0a10ca361f9befbc13722730b00cafec2dec943a",
+      "source_prediction_sha256": "9702eec671aff0b60045aef3e2f5ff3a3c800b7a5f13d08d1fa84ad1e147e1b9"
+    },
+    "full_seed92002": {
+      "alpha": 1.0,
+      "fit_rows": 900,
+      "fit_states": 180,
+      "path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/calibrators/v101f_frozen_calibrator_full_seed92002.joblib",
+      "sha256": "2071c3175d3e3115ab7365a0ee03ea374ef25d5af202b18178f84a8d557c4c1d",
+      "source_prediction_sha256": "c215b73d42fba4f1401cb48fd45f520cdad3d8d595054fe54f590e191650dc05"
+    },
+    "medium_seed2026": {
+      "alpha": 1.0,
+      "fit_rows": 900,
+      "fit_states": 180,
+      "path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/calibrators/v101f_frozen_calibrator_medium_seed2026.joblib",
+      "sha256": "139e81a3ce73e49b49e65fa2777104c11d5a21ac68026d7beb81dd489091731b",
+      "source_prediction_sha256": "942886f25d23ea4333d8ac420b9fc540b6544b8878a7cdf10f7afcbbe16e78ad"
+    },
+    "medium_seed314159": {
+      "alpha": 1.0,
+      "fit_rows": 900,
+      "fit_states": 180,
+      "path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/calibrators/v101f_frozen_calibrator_medium_seed314159.joblib",
+      "sha256": "d889a5e3c66da4909e00b70cabe08323183db6da9a672789700b29a919d34c3c",
+      "source_prediction_sha256": "a16c7f517e6f9a22eee0874f04dd20db232861bde206e2cea515ff1967be0fe5"
+    },
+    "medium_seed92002": {
+      "alpha": 1.0,
+      "fit_rows": 900,
+      "fit_states": 180,
+      "path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/calibrators/v101f_frozen_calibrator_medium_seed92002.joblib",
+      "sha256": "071f1d359cb662ec7b1757ec5263cd57b9651c66054b94d0d4ce9998183e4c3d",
+      "source_prediction_sha256": "af8d6cc3c0fd520ea5c15522e7cffc010911ee6015ee934f3d5db0e6e649cc6f"
+    }
+  },
+  "frozen_models": {
+    "full_seed2026": {
+      "candidate_bank_latency_ms_median": 0.34288596361875534,
+      "checkpoint": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_full_seed2026.pt",
+      "checkpoint_sha256": "35ba39f7a984e753b33122a9adfdd06dc1daad4173af30d341a5c0c0b7e017a1",
+      "forward_macs_per_candidate": 590848,
+      "metadata": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_full_seed2026.json",
+      "metadata_sha256": "548dc88567853bc7e2e9b054477a45bad9e2899bb7d6680c021695f6f9bf1416",
+      "parameter_count": 592448
+    },
+    "full_seed314159": {
+      "candidate_bank_latency_ms_median": 0.3446829505264759,
+      "checkpoint": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_full_seed314159.pt",
+      "checkpoint_sha256": "26521321e4fc829f2a72541006b86094ef732f5d8daa6b0ab70d983552a373a7",
+      "forward_macs_per_candidate": 590848,
+      "metadata": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_full_seed314159.json",
+      "metadata_sha256": "f74a8d76d764c9bd251755f5aec3e9398ce5ae0ff3b1f79074edbfcf71e4cab3",
+      "parameter_count": 592448
+    },
+    "full_seed92002": {
+      "candidate_bank_latency_ms_median": 0.3393300576135516,
+      "checkpoint": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_full_seed92002.pt",
+      "checkpoint_sha256": "d5d71f1df877e29f81b59d3973de499e9f9b1dd3c0e30810f76a051f8ce219ed",
+      "forward_macs_per_candidate": 590848,
+      "metadata": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_full_seed92002.json",
+      "metadata_sha256": "1056e27315fb76f9ebd4a341ef5d5c44c447fc096e977497d684185e2e967392",
+      "parameter_count": 592448
+    },
+    "medium_seed2026": {
+      "candidate_bank_latency_ms_median": 0.2592140808701515,
+      "checkpoint": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_medium_seed2026.pt",
+      "checkpoint_sha256": "587dad80d6502d08d901a22135fa46352177bf33b164c3aff8464130e3af9fc2",
+      "forward_macs_per_candidate": 98816,
+      "metadata": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_medium_seed2026.json",
+      "metadata_sha256": "8e952955f19558699911e770da307e1e7ca6adadce15d5bf97b42a7d958caeb9",
+      "parameter_count": 99392
+    },
+    "medium_seed314159": {
+      "candidate_bank_latency_ms_median": 0.260384869761765,
+      "checkpoint": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_medium_seed314159.pt",
+      "checkpoint_sha256": "34377ded567611cc39efd80a367ab67dec8afb1743aecebd0a176a9ed0ad3dd5",
+      "forward_macs_per_candidate": 98816,
+      "metadata": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_medium_seed314159.json",
+      "metadata_sha256": "e3ad941ee689bf4ec58e3664eb81cc87f18b45d4960742f77032bcc0606bbf7e",
+      "parameter_count": 99392
+    },
+    "medium_seed92002": {
+      "candidate_bank_latency_ms_median": 0.25831256061792374,
+      "checkpoint": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_medium_seed92002.pt",
+      "checkpoint_sha256": "10c623945a6607b1cc6df95f59fc319898cfdb4d16c17c93d150e336108c5705",
+      "forward_macs_per_candidate": 98816,
+      "metadata": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_medium_seed92002.json",
+      "metadata_sha256": "ee90e16f8017e9d4da4e1e107d5d474e39d5b89588c663ec9eb69a1689b8349f",
+      "parameter_count": 99392
+    }
+  },
+  "inference": {
+    "bootstrap_repetitions": 20000,
+    "bootstrap_seed": 10603,
+    "exact_count_randomization_repetitions": 5000,
+    "exact_count_randomization_seed": 10604,
+    "hierarchical_seed_resampling_is_secondary": true,
+    "model_seeds_are_fixed_design_replicates": true,
+    "multiple_comparison_control": {
+      "comparisons": 5,
+      "familywise_alpha": 0.05,
+      "method": "Bonferroni one-sided upper percentile bound",
+      "upper_quantile": 0.99
+    },
+    "primary_cluster_unit": "physical_global_state"
+  },
+  "latency": {
+    "benchmark_threads": 1,
+    "conservative_additive_accounting": true,
+    "full_model_ms": {
+      "2026": 0.34288596361875534,
+      "314159": 0.3446829505264759,
+      "92002": 0.3393300576135516
+    },
+    "medium_model_ms": {
+      "2026": 0.2592140808701515,
+      "314159": 0.260384869761765,
+      "92002": 0.25831256061792374
+    },
+    "primary_statistic": "median_of_round_medians",
+    "primary_unit": "milliseconds per one physical-state, one downstream-task, five-action decision query",
+    "repeats_per_round": 1000,
+    "rounds": 7,
+    "sample_queries": 512,
+    "sensitivity_statistic": "p90_of_all_queries",
+    "warmup": 200,
+    "world_model_source": "Hash-locked V101F candidate-bank latency medians; V106 measures all task, decision, margin, and router overheads before audit access.",
+    "world_model_unit": "milliseconds per one physical-state, five-action prediction query"
+  },
+  "model_pair": [
+    "medium",
+    "full"
+  ],
+  "policies": {
+    "candidate": "PushT prediction-interface sequential router",
+    "exploratory_reference": "Oracle sequential",
+    "primary_references": [
+      "Fixed Medium",
+      "Fixed Full",
+      "Task-only input router",
+      "Margin sequential matched-rate",
+      "Expected random input matched-rate"
+    ]
+  },
+  "protocol_name": "v107_fresh_prediction_vs_dino_action_confirmation",
+  "protocol_status": "V107_PROTOCOL_SEALED_BEFORE_FRESH_PUSHT_OUTCOMES",
+  "representation": {
+    "crop_size_world": 320,
+    "dino_checkpoint_path": "/lustre/home/u10010019/.cache/torch/hub/checkpoints/dinov2_vits14_pretrain.pth",
+    "dino_checkpoint_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "dino_model": "dinov2_vits14",
+    "dino_python_source_files": 157,
+    "dino_python_tree_sha256": "5ff540a67ea836178d641ddb79fde8c9245e37333a08e53b63f4568df53d59df",
+    "dino_repository_path": "/lustre/home/u10010019/.cache/torch/hub/facebookresearch_dinov2_main",
+    "offline_local_source_required": true,
+    "pca_components": 64,
+    "pca_path": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/v101c_dino_pca.joblib",
+    "pca_sha256": "7e434d0a7c7eec81997e820d59bd933ba63b9aa41334696b0df9beba4bcdd67f",
+    "pool_grid": 4,
+    "resize": 224,
+    "torch_home": "/lustre/home/u10010019/.cache/torch"
+  },
+  "router": {
+    "activation": "relu",
+    "alpha": 0.0001,
+    "batch_size": 1024,
+    "early_stopping": false,
+    "hidden_layer_sizes": [
+      128,
+      64
+    ],
+    "learning_rate_init": 0.001,
+    "max_iter": 80,
+    "random_seed": 10602,
+    "score_implementation": "numpy_float32",
+    "solver": "adam",
+    "threshold_comparison": "strict_greater_than",
+    "threshold_quantiles": 101,
+    "type": "mlp_regressor"
+  },
+  "runtime_at_protocol_freeze": {
+    "Pillow": "12.2.0",
+    "gym-pusht": "0.1.6",
+    "gymnasium": "1.3.0",
+    "joblib": "1.5.3",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "pymunk": "6.11.1",
+    "python": "3.10.20",
+    "scikit-learn": "1.7.2",
+    "torch": "2.6.0+cu124"
+  },
+  "runtime_at_seal": {
+    "gym-pusht": "0.1.6",
+    "gymnasium": "1.3.0",
+    "joblib": "1.5.3",
+    "numpy": "2.2.6",
+    "pymunk": "6.11.1",
+    "python": "3.10.20",
+    "scikit-learn": "1.7.2",
+    "torch": "2.6.0+cu124"
+  },
+  "scientific_role": "Fresh, outcome-sealed PushT confirmation of decision-interface routing. V101F world models, DINO/PCA, physical calibrators, actions, horizon, task family, router architecture, primary lambda, latency unit, references, inference, and gates are frozen before every V106 physical outcome.",
+  "sealed_utc": "2026-07-28T23:26:16.190043+00:00",
+  "software": {
+    "compute_nodes_require_offline_assets": true,
+    "required_exact": {
+      "gym-pusht": "0.1.6",
+      "pymunk": "6.11.1"
+    },
+    "thread_count_for_scientific_latency": 1
+  },
+  "source": {
+    "candidate_count": 5,
+    "dataset": "Fresh V106 PushT five-action bank",
+    "split_code_map": {
+      "0": "train",
+      "1": "validation",
+      "2": "audit"
+    },
+    "upstream_assets": "Hash-locked V101F DINO/PCA, Medium/Full predictors, and physical calibrators"
+  },
+  "source_lineage": {
+    "architecture_and_estimand_selected_during_development": true,
+    "fresh_state_overlap_with_v101c_v101f": 0,
+    "prior_reset_seed_scan_path": "reports/v106_pusht_sealed_confirmation/frozen/v106_prior_reset_seed_scan.csv",
+    "prior_reset_seed_scan_sha256": "578a6b45d30cf94e31d08094ed17887b986c9ec578d842f28b530c87508b029f",
+    "prior_reset_seed_scan_summary": {
+      "candidate_artifacts_scanned": 100,
+      "readable_reset_seed_artifacts": 21,
+      "scan_errors": 0,
+      "unique_prior_reset_seeds_observed": 6000,
+      "v106_overlap_count": 0
+    },
+    "router_or_threshold_transferred_from_v105b": false,
+    "v101f_protocol_path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/v101f_protocol.json",
+    "v101f_protocol_sha256": "f55926906f305d70908810e059d13ec350d7ebbde4dc957ae072f38800e0f979",
+    "v106_design_sha256": "b5138c4535f07521671f86f2ddcc34f0c8a46cf976daf3e0454a42476533e238"
+  },
+  "split": {
+    "audit_shards": [
+      8,
+      9
+    ],
+    "counts": {
+      "audit": 1600,
+      "train": 5200,
+      "validation": 1200
+    },
+    "development_shards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "path": "reports/v106_pusht_sealed_confirmation/frozen/v106_state_split.csv",
+    "seed": 10601,
+    "selection_rule": "Train and validation are assigned by a deterministic permutation within development shards 0-7. Shards 8-9 are audit-only and are never opened by the router-sealing job.",
+    "sha256": "653773b8b7db872146d98015ffeac0845ab5de8bc8f54fb24c81f1980cd8c201"
+  },
+  "stage": "confirmation",
+  "status": "V107_PROTOCOL_SEALED_BEFORE_FRESH_PUSHT_OUTCOMES",
+  "success_rule": {
+    "global_primary": "All five state-clustered candidate-minus-reference Bonferroni one-sided upper bounds are below zero at lambda=0.002.",
+    "overall": "All four criteria pass.",
+    "randomization": "The conditional exact-count Monte Carlo p-value against matched random routing is below 0.05.",
+    "seed_replication": "Candidate-minus-reference point estimates are negative against Fixed Medium and Expected random input matched-rate on all three frozen upstream model seeds.",
+    "weight_profile_robustness": "Against Fixed Medium and Expected random input matched-rate, every weight-profile point estimate is negative and no state-clustered two-sided 95% interval lies entirely above zero."
+  },
+  "upstream_model_seeds": [
+    92002,
+    2026,
+    314159
+  ],
+  "upstream_v106_protocol_sha256": "0603397fcf3b5209ac2a92a70a334b23c61083b5ff7fc87e5972e52737bf514d",
+  "utility": {
+    "definition": "decision_regret + lambda * latency_ms",
+    "lambda_grid": [
+      0.0,
+      0.002,
+      0.005,
+      0.01,
+      0.025,
+      0.05
+    ],
+    "primary_lambda": 0.002
+  },
+  "v107": {
+    "claims": {
+      "allowed_if_gate_passes": "On a fresh exact-reset PushT bank, a frozen task-and-Medium-prediction router has lower priced physical decision cost than an optimistically latency-favoured, dimension-matched, action-conditioned current-DINO router, under the prespecified five-action, 39-task, three-checkpoint-pair protocol at lambda = 0.002.",
+      "forbidden": [
+        "Prediction is causally sufficient or universally superior to current-state information.",
+        "The result generalizes beyond the tested PushT family, tasks, candidate set, checkpoint pairs, and compute price.",
+        "The router saves raw latency, energy, or total system compute.",
+        "The result is closed-loop control evidence.",
+        "The three checkpoint pairs define a population confidence interval over training randomness.",
+        "The result establishes a new generic routing or value-of-information theory."
+      ]
+    },
+    "confirmatory": true,
+    "development_origin": {
+      "development_evidence_archive_sha256": "78672f19ccad91500c65e6ccf795913d8d8c7e2354eef80b89b5e7ee36e3cc58",
+      "role": "V106 audit and V107 exploratory screens are design data only; all V107 states are fresh audit-only outcomes.",
+      "selected_objective": "direct_gross_regression",
+      "v106_audit_already_opened": true
+    },
+    "environment": {
+      "all_states_role": "audit_only",
+      "candidate_count": 5,
+      "generation_base_seeds": [
+        2710003,
+        2720003
+      ],
+      "global_id_offset": 10700000,
+      "horizon": 30,
+      "id": "gym_pusht/PushT-v0",
+      "radius": 80.0,
+      "render_contract": {
+        "action_overlay_included": false,
+        "height": 512,
+        "interface": "PushTEnv._render(visualize=False)",
+        "width": 512
+      },
+      "shards": 2,
+      "states_per_shard": 800,
+      "total_states": 1600
+    },
+    "inference": {
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 107031,
+      "checkpoint_pairs_are_fixed_design_replicates": true,
+      "fixed_checkpoint_pairs": 3,
+      "one_sided_upper_quantile": 0.95,
+      "primary_cluster_unit": "physical_global_state",
+      "primary_estimand": "mean over 39 tasks, then mean over three fixed checkpoint pairs within state, then mean over 1600 physical states of prediction cost minus dino_action_pca43 cost"
+    },
+    "primary_interfaces": {
+      "dino_action_pca43": {
+        "control_intentionally_favored": true,
+        "dino_encoder_latency_charged": false,
+        "feature_dimension": 65,
+        "features": "22 task features + 43D projection of [z_current, five candidate actions]",
+        "routing_mode": "input"
+      },
+      "prediction": {
+        "current_medium_always_paid": true,
+        "feature_dimension": 65,
+        "features": "22 task features + complete 43-dimensional Medium-derived prediction interface",
+        "routing_mode": "sequential"
+      }
+    },
+    "protocol_name": "v107_fresh_prediction_vs_dino_action_confirmation",
+    "router": {
+      "control_projection": {
+        "components": 43,
+        "fit_split": "V106 train states only",
+        "pca_solver": "full",
+        "random_seed": 10726,
+        "scaler": "StandardScaler"
+      },
+      "family": "StandardScaler + MLPRegressor",
+      "objective": "direct_gross_regression",
+      "score_implementation": "deterministic_numpy_float32_forward",
+      "source_models": [
+        {
+          "interface": "dino_action_pca43",
+          "objective": "direct_gross_regression",
+          "path": "assets/v107_confirmation/source_models/dino_action_pca43__direct_gross_regression__seed2026.joblib",
+          "sha256": "9ef6e98d843ae97613f5f5097dcbd7172b1220509dffd4263f903d5cdb18818d",
+          "upstream_model_seed": 2026
+        },
+        {
+          "interface": "dino_action_pca43",
+          "objective": "direct_gross_regression",
+          "path": "assets/v107_confirmation/source_models/dino_action_pca43__direct_gross_regression__seed314159.joblib",
+          "sha256": "3388a1553517fb0fd4bd7909d0bf65c8b5535f4dccdcd137d1aa602bffeb6e6a",
+          "upstream_model_seed": 314159
+        },
+        {
+          "interface": "dino_action_pca43",
+          "objective": "direct_gross_regression",
+          "path": "assets/v107_confirmation/source_models/dino_action_pca43__direct_gross_regression__seed92002.joblib",
+          "sha256": "ad267ba894c6f4f130a4068c155fcb1edfa9e046e909892af3c326859a238484",
+          "upstream_model_seed": 92002
+        },
+        {
+          "interface": "prediction",
+          "objective": "direct_gross_regression",
+          "path": "assets/v107_confirmation/source_models/prediction__direct_gross_regression__seed2026.joblib",
+          "sha256": "b23ca2e2d6f32f72aadac195d066bf944055a189488d37002fff1040bc2dcb2d",
+          "upstream_model_seed": 2026
+        },
+        {
+          "interface": "prediction",
+          "objective": "direct_gross_regression",
+          "path": "assets/v107_confirmation/source_models/prediction__direct_gross_regression__seed314159.joblib",
+          "sha256": "b67f4812e109bd56d894175b1d2c22ce3f5d3b6f752f77d664ae0a8b3c027a58",
+          "upstream_model_seed": 314159
+        },
+        {
+          "interface": "prediction",
+          "objective": "direct_gross_regression",
+          "path": "assets/v107_confirmation/source_models/prediction__direct_gross_regression__seed92002.joblib",
+          "sha256": "2fa2a61c5e917ace7d4f778f1df1d61c74f51f45592b3a5d53fdc733705070fe",
+          "upstream_model_seed": 92002
+        }
+      ],
+      "source_screen_rows": [
+        {
+          "interface": "prediction",
+          "routing_mode": "sequential",
+          "source_router_overhead_ms": 0.2112395,
+          "source_threshold": 0.0024993513524532293,
+          "source_validation_cost_mean": 0.030108839995597672,
+          "source_validation_escalation_rate": 0.51,
+          "source_validation_latency_ms_mean": 0.6538681300008349,
+          "source_validation_regret_mean": 0.028801103735596006,
+          "upstream_model_seed": 92002
+        },
+        {
+          "interface": "dino_action_pca43",
+          "routing_mode": "input",
+          "source_router_overhead_ms": 0.209537,
+          "source_threshold": -0.006025080233812332,
+          "source_validation_cost_mean": 0.03196769934774956,
+          "source_validation_escalation_rate": 0.59,
+          "source_validation_latency_ms_mean": 0.5377238838453442,
+          "source_validation_regret_mean": 0.03089225158005887,
+          "upstream_model_seed": 92002
+        },
+        {
+          "interface": "prediction",
+          "routing_mode": "sequential",
+          "source_router_overhead_ms": 0.2061615,
+          "source_threshold": 0.000670073926448828,
+          "source_validation_cost_mean": 0.02998715452553584,
+          "source_validation_escalation_rate": 0.44,
+          "source_validation_latency_ms_mean": 0.6258959248624039,
+          "source_validation_regret_mean": 0.02873536267581103,
+          "upstream_model_seed": 2026
+        },
+        {
+          "interface": "dino_action_pca43",
+          "routing_mode": "input",
+          "source_router_overhead_ms": 0.210804,
+          "source_threshold": 0.0016648489050567151,
+          "source_validation_cost_mean": 0.032081199876379134,
+          "source_validation_escalation_rate": 0.76,
+          "source_validation_latency_ms_mean": 0.5555417117590906,
+          "source_validation_regret_mean": 0.030970116452860963,
+          "upstream_model_seed": 2026
+        },
+        {
+          "interface": "prediction",
+          "routing_mode": "sequential",
+          "source_router_overhead_ms": 0.2063065,
+          "source_threshold": 0.004650156926363708,
+          "source_validation_cost_mean": 0.029710926577128777,
+          "source_validation_escalation_rate": 0.47,
+          "source_validation_latency_ms_mean": 0.6390175515092087,
+          "source_validation_regret_mean": 0.02843289147411036,
+          "upstream_model_seed": 314159
+        },
+        {
+          "interface": "dino_action_pca43",
+          "routing_mode": "input",
+          "source_router_overhead_ms": 0.20993699999999998,
+          "source_threshold": -0.0036013440787792204,
+          "source_validation_cost_mean": 0.031995987957564996,
+          "source_validation_escalation_rate": 0.63,
+          "source_validation_latency_ms_mean": 0.5453981606435329,
+          "source_validation_regret_mean": 0.030905191636277925,
+          "upstream_model_seed": 314159
+        }
+      ],
+      "threshold_quantiles": 101,
+      "timing": {
+        "repeats_per_round": 1000,
+        "rounds": 7,
+        "warmup": 200
+      }
+    },
+    "software": {
+      "required_exact": {
+        "gym-pusht": "0.1.6",
+        "numpy": "2.2.6",
+        "pymunk": "6.11.1",
+        "python_major_minor": "3.10",
+        "scikit-learn": "1.7.2"
+      },
+      "scientific_threads": 1
+    },
+    "source": {
+      "audit_shards_forbidden_to_freeze": [
+        8,
+        9
+      ],
+      "development_shards": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "required_v106_repo_files": [
+        {
+          "path": "scripts/v106_data_common.py",
+          "sha256": "01fc4eed6808b813f51a89728910b6ec2457f9eed87a72c876982466e0e74145"
+        },
+        {
+          "path": "scripts/v106_decision_common.py",
+          "sha256": "6ad494ea2774f84f6db9d9c6f91db1b0a96b07d4b765fc4fd0ac3f5d669bb8e1"
+        },
+        {
+          "path": "scripts/v106_generate.py",
+          "sha256": "5c1d82684fdd5ee21d2dd4e3ccefe50c84d684641abe0f7a47956db7b5a2aa70"
+        },
+        {
+          "path": "scripts/v106_infer.py",
+          "sha256": "06a17268c1238c31db59f6a18257efd35b4a159848cdb3beec97a7921fb49793"
+        }
+      ],
+      "v106_latency_path": "reports/v106_pusht_sealed_confirmation/sealed_router/latency_components.csv",
+      "v106_latency_sha256": "437e58a6bfef87e1a7a74e9de67fe77196eced9ba1366d74fb9dae533d9ab2ba",
+      "v106_protocol_path": "reports/v106_pusht_sealed_confirmation/frozen/v106_protocol.json",
+      "v106_protocol_sha256": "0603397fcf3b5209ac2a92a70a334b23c61083b5ff7fc87e5972e52737bf514d",
+      "v106_state_split_path": "reports/v106_pusht_sealed_confirmation/frozen/v106_state_split.csv",
+      "v106_state_split_sha256": "653773b8b7db872146d98015ffeac0845ab5de8bc8f54fb24c81f1980cd8c201"
+    },
+    "stage": "fresh_confirmation",
+    "success_rule": {
+      "aggregate_point_negative": true,
+      "all_required": true,
+      "each_checkpoint_pair_point_negative": true,
+      "one_sided_95_upper_below_zero": true
+    },
+    "utility": {
+      "definition": "decision_regret + lambda * latency_ms",
+      "primary_lambda": 0.002,
+      "secondary_lambda_grid": [
+        0.0,
+        0.002,
+        0.005,
+        0.01,
+        0.025,
+        0.05
+      ]
+    }
+  },
+  "v107_prior_reset_seed_scan": {
+    "path": "reports/v107_fresh_confirmation/frozen/v107_prior_reset_seed_scan.csv",
+    "sha256": "cdb07a83612235247511f0167e52cb3b5044f858260bd85be71716db9c02de4a",
+    "summary": {
+      "candidate_artifacts_scanned": 122,
+      "readable_reset_seed_artifacts": 42,
+      "scan_errors": 0,
+      "unique_prior_reset_seeds_observed": 14000,
+      "v107_overlap_count": 0
+    }
+  },
+  "v107_sealed_router": {
+    "latency_sha256": "1f9b0da7224c8ca9ba4ddec569f1d3365a399eee39a563aa1420c92971844328",
+    "models_sha256": "546115f64673af3eb7c9d0417e6685128334b3e354db75c8647614f4b341099d",
+    "projection_path": "reports/v107_fresh_confirmation/sealed_router/dino_action_pca43_projection.joblib",
+    "projection_sha256": "4e5f00def8ed1fa92be2bf83a6ea2470cc821796e86f8d1c8f0362a65c5473c5",
+    "scientific_score_implementation": "numpy_float32",
+    "thresholds_sha256": "d90f8645ec85dfc8eacd3134bd3b84378124d8d6e264b5bf8c5676b145cc4179"
+  },
+  "v107_state_seed_manifest": {
+    "all_states_role": "audit_only",
+    "path": "reports/v107_fresh_confirmation/frozen/v107_state_seed_manifest.csv",
+    "sha256": "7f45b04ac8641baf944c1d24993162210f249aa49481586487007d9cab33d54f",
+    "states": 1600
+  }
+}

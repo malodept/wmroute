@@ -1,0 +1,221 @@
+{
+  "active_normalized_protocol_sha256": "eaaab3ce56a9b618f7c51f9157ee1a29be47073d1cd764a9f15242aa4c96ea04",
+  "audit_shards": [
+    8,
+    9
+  ],
+  "audit_states": 1600,
+  "confirmatory": true,
+  "crossed_sensitivity_interpretation": "empirical quantiles over the observed three-checkpoint distribution; not population confidence intervals",
+  "exact_count_randomization": {
+    "candidate_minus_random_draw_mean": -0.0035928410966814517,
+    "draw_q025": -0.0037275969074240414,
+    "draw_q975": -0.0034568132863108158,
+    "included_in_familywise_inference": false,
+    "interpretation": "descriptive matched-count random-input benchmark; not a permutation or randomization-test p-value",
+    "plus_one_benchmark_tail_fraction": 0.0001999600079984003,
+    "repetitions": 5000,
+    "seed": 10604,
+    "seedwise": [
+      {
+        "audit_rows": 62400,
+        "candidate_minus_random_draw_mean": -0.0036529578340642743,
+        "draw_q025": -0.0038909928908677474,
+        "draw_q975": -0.003422648771074847,
+        "escalation_rate": 0.39520833333333333,
+        "exact_escalation_count": 24661,
+        "upstream_model_seed": 92002
+      },
+      {
+        "audit_rows": 62400,
+        "candidate_minus_random_draw_mean": -0.00364594446200358,
+        "draw_q025": -0.003876593070783225,
+        "draw_q975": -0.003424351305437545,
+        "escalation_rate": 0.4657051282051282,
+        "exact_escalation_count": 29060,
+        "upstream_model_seed": 2026
+      },
+      {
+        "audit_rows": 62400,
+        "candidate_minus_random_draw_mean": -0.0034796209939765006,
+        "draw_q025": -0.003714444067236351,
+        "draw_q975": -0.0032518637921736334,
+        "escalation_rate": 0.39939102564102563,
+        "exact_escalation_count": 24922,
+        "upstream_model_seed": 314159
+      }
+    ]
+  },
+  "fresh_physical_bank": true,
+  "historical_protocol_sha256": "0603397fcf3b5209ac2a92a70a334b23c61083b5ff7fc87e5972e52737bf514d",
+  "interpretation_guardrail": "A passing gate confirms the preregistered claim only for the frozen five-action PushT bank and 39-task family. It does not establish compute saving, Pareto optimality, Blackwell/Le Cam incomparability, or generalization to arbitrary world models.",
+  "primary_cluster_unit": "physical_global_state",
+  "primary_comparisons": [
+    {
+      "adjusted_one_sided_upper_quantile": "-0.003649722234407057",
+      "adjusted_upper_below_zero": "True",
+      "bonferroni_adjusted_one_sided_upper": "-0.0037799422688038742",
+      "bootstrap_repetitions": "20000",
+      "candidate": "PushT prediction-interface sequential router",
+      "cost_difference_candidate_minus_reference": "-0.004307652735007721",
+      "crossed_state_vector_shared_across_sampled_seeds": "True",
+      "lambda": "0.002",
+      "primary_cluster_unit": "physical_global_state",
+      "reference": "Fixed Medium",
+      "sensitivity_adjusted_upper_below_zero": "True",
+      "sensitivity_population_confidence_interval": "False",
+      "sensitivity_q025": "-0.0048703908905520735",
+      "sensitivity_q975": "-0.0037503496324817528",
+      "state_clustered_ci95_high": "-0.003857047640425328",
+      "state_clustered_ci95_low": "-0.0047593593091239846"
+    },
+    {
+      "adjusted_one_sided_upper_quantile": "-0.0017408403270201644",
+      "adjusted_upper_below_zero": "True",
+      "bonferroni_adjusted_one_sided_upper": "-0.0020823043090220056",
+      "bootstrap_repetitions": "20000",
+      "candidate": "PushT prediction-interface sequential router",
+      "cost_difference_candidate_minus_reference": "-0.002576937001531322",
+      "crossed_state_vector_shared_across_sampled_seeds": "True",
+      "lambda": "0.002",
+      "primary_cluster_unit": "physical_global_state",
+      "reference": "Fixed Full",
+      "sensitivity_adjusted_upper_below_zero": "True",
+      "sensitivity_population_confidence_interval": "False",
+      "sensitivity_q025": "-0.00321810433563937",
+      "sensitivity_q975": "-0.0018910499583723744",
+      "state_clustered_ci95_high": "-0.002159482702555719",
+      "state_clustered_ci95_low": "-0.0030008110819344513"
+    },
+    {
+      "adjusted_one_sided_upper_quantile": "-0.00178185891646822",
+      "adjusted_upper_below_zero": "True",
+      "bonferroni_adjusted_one_sided_upper": "-0.002125737045465024",
+      "bootstrap_repetitions": "20000",
+      "candidate": "PushT prediction-interface sequential router",
+      "cost_difference_candidate_minus_reference": "-0.002619876386493737",
+      "crossed_state_vector_shared_across_sampled_seeds": "True",
+      "lambda": "0.002",
+      "primary_cluster_unit": "physical_global_state",
+      "reference": "Task-only input router",
+      "sensitivity_adjusted_upper_below_zero": "True",
+      "sensitivity_population_confidence_interval": "False",
+      "sensitivity_q025": "-0.0032724400688860125",
+      "sensitivity_q975": "-0.0019369800336445872",
+      "state_clustered_ci95_high": "-0.002212991785197032",
+      "state_clustered_ci95_low": "-0.0030365554244794726"
+    },
+    {
+      "adjusted_one_sided_upper_quantile": "-0.002770337524507998",
+      "adjusted_upper_below_zero": "True",
+      "bonferroni_adjusted_one_sided_upper": "-0.002875962549399418",
+      "bootstrap_repetitions": "20000",
+      "candidate": "PushT prediction-interface sequential router",
+      "cost_difference_candidate_minus_reference": "-0.0032942143313822803",
+      "crossed_state_vector_shared_across_sampled_seeds": "True",
+      "lambda": "0.002",
+      "primary_cluster_unit": "physical_global_state",
+      "reference": "Margin sequential matched-rate",
+      "sensitivity_adjusted_upper_below_zero": "True",
+      "sensitivity_population_confidence_interval": "False",
+      "sensitivity_q025": "-0.003746632830336871",
+      "sensitivity_q975": "-0.0028591880535248277",
+      "state_clustered_ci95_high": "-0.0029421342860056396",
+      "state_clustered_ci95_low": "-0.003652793682938762"
+    },
+    {
+      "adjusted_one_sided_upper_quantile": "-0.0031634349812545283",
+      "adjusted_upper_below_zero": "True",
+      "bonferroni_adjusted_one_sided_upper": "-0.0032500527349364453",
+      "bootstrap_repetitions": "20000",
+      "candidate": "PushT prediction-interface sequential router",
+      "cost_difference_candidate_minus_reference": "-0.003591089555285135",
+      "crossed_state_vector_shared_across_sampled_seeds": "True",
+      "lambda": "0.002",
+      "primary_cluster_unit": "physical_global_state",
+      "reference": "Expected random input matched-rate",
+      "sensitivity_adjusted_upper_below_zero": "True",
+      "sensitivity_population_confidence_interval": "False",
+      "sensitivity_q025": "-0.00394880682132613",
+      "sensitivity_q975": "-0.0032385766963386733",
+      "state_clustered_ci95_high": "-0.0033012203007691168",
+      "state_clustered_ci95_low": "-0.0038771685120625923"
+    }
+  ],
+  "primary_lambda": 0.002,
+  "primary_policy_summary": [
+    {
+      "decision_cost_mean_equal_seed": 0.03036972150792194,
+      "escalation_rate_equal_seed": 0.4201014957264957,
+      "latency_ms_mean_equal_seed": 0.6509025892071564,
+      "policy": "PushT prediction-interface sequential router",
+      "regret_mean_equal_seed": 0.029067916329507625
+    },
+    {
+      "decision_cost_mean_equal_seed": 0.03467737424292965,
+      "escalation_rate_equal_seed": 0.0,
+      "latency_ms_mean_equal_seed": 0.28129567041661324,
+      "policy": "Fixed Medium",
+      "regret_mean_equal_seed": 0.03411478290209643
+    },
+    {
+      "decision_cost_mean_equal_seed": 0.032946658509453254,
+      "escalation_rate_equal_seed": 1.0,
+      "latency_ms_mean_equal_seed": 0.36429149058626087,
+      "policy": "Fixed Full",
+      "regret_mean_equal_seed": 0.03221807552828074
+    },
+    {
+      "decision_cost_mean_equal_seed": 0.03298959789441568,
+      "escalation_rate_equal_seed": 0.9914529914529915,
+      "latency_ms_mean_equal_seed": 0.3885440333469821,
+      "policy": "Task-only input router",
+      "regret_mean_equal_seed": 0.03221250982772172
+    },
+    {
+      "decision_cost_mean_equal_seed": 0.033663935839304215,
+      "escalation_rate_equal_seed": 0.4201014957264957,
+      "latency_ms_mean_equal_seed": 0.44390425587382304,
+      "policy": "Margin sequential matched-rate",
+      "regret_mean_equal_seed": 0.032776127327556574
+    },
+    {
+      "decision_cost_mean_equal_seed": 0.033960811063207065,
+      "escalation_rate_equal_seed": 0.42010149572649574,
+      "latency_ms_mean_equal_seed": 0.3161800410090372,
+      "policy": "Expected random input matched-rate",
+      "regret_mean_equal_seed": 0.033328450981189
+    },
+    {
+      "decision_cost_mean_equal_seed": 0.0203108879528968,
+      "escalation_rate_equal_seed": 0.2308707264957265,
+      "latency_ms_mean_equal_seed": 0.3654054664170267,
+      "policy": "Oracle sequential",
+      "regret_mean_equal_seed": 0.019580077020062748
+    }
+  ],
+  "protocol_sha256": "eaaab3ce56a9b618f7c51f9157ee1a29be47073d1cd764a9f15242aa4c96ea04",
+  "scientific_gate": {
+    "benchmark_is_inferential_gate": false,
+    "global_primary_pass": true,
+    "matched_count_benchmark_descriptive_pass": true,
+    "overall_frozen_audit_criteria_pass": true,
+    "primary_inferential_family_pass": true,
+    "seed_replication_pass": true,
+    "weight_profile_robustness_pass": true
+  },
+  "scientific_score_implementation": "numpy_float32",
+  "secondary_seed_sensitivity": {
+    "active": "repaired_inference/crossed_seed_state_sensitivity.csv",
+    "crossed_state_pairing_preserved": true,
+    "interpretation": "secondary empirical-three-seed sensitivity, not primary population inference"
+  },
+  "status": "V106_SEALED_CONFIRMATION_AUDIT_COMPLETE",
+  "task_only_primary_full_route_rate_equal_checkpoint": 0.9914529914529915,
+  "tasks": 39,
+  "upstream_model_seeds": [
+    92002,
+    2026,
+    314159
+  ]
+}

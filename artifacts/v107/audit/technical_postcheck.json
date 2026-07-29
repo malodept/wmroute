@@ -1,0 +1,21 @@
+{
+  "audit_manifest_sha256": "0ac5ee3a586e313e9b8308f6bb642e96833eabc439d4da8ddadc40dadb4d9c87",
+  "bootstrap_draws_exactly_reproduced": true,
+  "checkpoint_pair_points": {
+    "2026": -0.002428164209938957,
+    "314159": -0.002540063197624237,
+    "92002": -0.002679782648384262
+  },
+  "confirmation_manifest_sha256": "07f0bf77fcb83070df5b0420e1dc9ae895ce33bbab5ce3953ab6d64ec01901f6",
+  "fixed_checkpoint_pairs": 3,
+  "fresh_states": 1600,
+  "output_hashes_verified": 11,
+  "primary_ci95_high": -0.002238474267725135,
+  "primary_ci95_low": -0.0028669004993478442,
+  "primary_gate_pass": true,
+  "primary_one_sided_95_upper": -0.002286383099371905,
+  "primary_point": -0.0025493366853158186,
+  "protocol_sha256": "6374d4bfdb0cf206be022415a01d86dc63733da12ef05f2e2e14fa7ae515aca3",
+  "status": "V107_FRESH_CONFIRMATION_POSTCHECK_OK",
+  "tasks": 39
+}

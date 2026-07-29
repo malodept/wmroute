@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software or the released audit artifacts, please cite the accompanying preprint."
+title: "Routing World-Model Compute from Predicted Consequences"
+type: software
+version: 0.1.0-preprint
+date-released: 2026-07-29
+authors:
+  - family-names: "de Pastor"
+    given-names: "Malo"
+    orcid: "https://orcid.org/0009-0009-1913-0052"
+repository-code: "https://github.com/malodept/wmroute"
+url: "https://malodept.github.io/wmroute/"
+abstract: >-
+  Reusable routing utilities, reusable code, compact audit evidence,
+  and paired exact-reset evaluations for selecting between separately frozen
+  Medium and Full world-model predictors. The release includes a prospectively
+  sealed confirmation against a matched current-DINO/action control.
+preferred-citation:
+  type: article
+  title: "Routing World-Model Compute from Predicted Consequences: A Paired Exact-Reset Evaluation"
+  authors:
+    - family-names: "de Pastor"
+      given-names: "Malo"
+      orcid: "https://orcid.org/0009-0009-1913-0052"
+  year: 2026
+  notes: "Preprint; arXiv submission pending"

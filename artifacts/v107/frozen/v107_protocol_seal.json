@@ -1,0 +1,12 @@
+{
+  "audit_accessed_at_seal": false,
+  "fresh_reset_seed_overlap_count": 0,
+  "physical_outcomes_present_at_seal": false,
+  "prior_reset_seed_scan_sha256": "cdb07a83612235247511f0167e52cb3b5044f858260bd85be71716db9c02de4a",
+  "protocol_sha256": "6374d4bfdb0cf206be022415a01d86dc63733da12ef05f2e2e14fa7ae515aca3",
+  "router_seal_sha256": "b742013cf39d1fdb31d3f33e97194bda03948fa670725d407ac1e550a93735a6",
+  "router_status": "V107_PRIMARY_ROUTERS_SEALED_BEFORE_FRESH_PUSHT_OUTCOMES",
+  "sealed_utc": "2026-07-28T23:26:16.213149+00:00",
+  "state_seed_manifest_sha256": "7f45b04ac8641baf944c1d24993162210f249aa49481586487007d9cab33d54f",
+  "status": "V107_PROTOCOL_SEALED_BEFORE_FRESH_PUSHT_OUTCOMES"
+}

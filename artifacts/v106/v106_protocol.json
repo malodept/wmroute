@@ -1,0 +1,549 @@
+{
+  "candidate": {
+    "expected_feature_dimension": 65,
+    "feature_groups": [
+      "task",
+      "medium_calibrated_prediction"
+    ],
+    "forbidden_inputs": [
+      "state",
+      "state_xy",
+      "future_state",
+      "future_observed",
+      "z_current",
+      "current_dino",
+      "z_future",
+      "true_loss",
+      "oracle_action",
+      "regret_medium",
+      "regret_full",
+      "oracle_benefit",
+      "full_prediction",
+      "full_predicted_loss",
+      "correctness",
+      "coverage",
+      "goal_pose"
+    ],
+    "name": "PushT prediction-interface sequential router",
+    "routing_mode": "sequential"
+  },
+  "claims": {
+    "allowed_if_gate_passes": [
+      "On a fresh sealed PushT bank, a task-and-Medium-prediction router improves decision cost over both fixed world-model choices and three non-learned or task-only routing references at the preregistered compute price.",
+      "The result replicates across all three frozen upstream model seeds and all three preregistered loss-weight profiles."
+    ],
+    "always_forbidden": [
+      "The router saves compute.",
+      "The router is deployment-Pareto optimal.",
+      "The result establishes Blackwell or Le Cam incomparability.",
+      "The result generalizes beyond the frozen five-action PushT bank and restricted 39-task family.",
+      "The calibrated prediction is independent of the current observation.",
+      "Any audit outcome may be used to modify this protocol, models, thresholds, latency accounting, or gate."
+    ]
+  },
+  "code_sha256": {
+    "jobs/run_v106_audit.pbs": "1ac40408f431cadcc6ad19d8b53eea938327266e233284b61ed5cd6cbf135a98",
+    "jobs/run_v106_generate_array.pbs": "a406c2cd31bc87e65f69f2724ef7c62a49fb63dd7a87a3fc898af855994eff18",
+    "jobs/run_v106_infer_array.pbs": "078d926c34e111d48c25af3aa2ceff81827af6d8a84625ec9e436d325873742a",
+    "jobs/run_v106_train_seal.pbs": "393fb3382ee51c00fe7084f20dbf07213b2e3ee235f3a32e4689a006b25d8048",
+    "scripts/v106_audit.py": "380e773c7c285832247359af0a03aa5160448094eed08741216338748f35a293",
+    "scripts/v106_data_common.py": "01fc4eed6808b813f51a89728910b6ec2457f9eed87a72c876982466e0e74145",
+    "scripts/v106_decision_common.py": "6ad494ea2774f84f6db9d9c6f91db1b0a96b07d4b765fc4fd0ac3f5d669bb8e1",
+    "scripts/v106_freeze.py": "c7aab9efc34ad9095d7fc2903b9abdf87f7812bf862a551c772df1d7d22fa903",
+    "scripts/v106_generate.py": "5c1d82684fdd5ee21d2dd4e3ccefe50c84d684641abe0f7a47956db7b5a2aa70",
+    "scripts/v106_infer.py": "06a17268c1238c31db59f6a18257efd35b4a159848cdb3beec97a7921fb49793",
+    "scripts/v106_integration_selftest.py": "51f1cf73ca38852ab3cf5f42911f98220db86be525c4bd6de6e9cff3b8ba569f",
+    "scripts/v106_postcheck.py": "a8d607f003510e8fb7e677f1aa5b28b889e95cc27e930711a090868ae53ca7f3",
+    "scripts/v106_selftest.py": "e3acd513cbc85e915b2b48b0e67a634eccd9848b010064529d579d56571e14eb",
+    "scripts/v106_train_seal.py": "a9af9d18f1cd85e68c1a75b181943119f5080f2a440d87ed9788310cdbbc2645"
+  },
+  "confirmatory": true,
+  "decision_family": {
+    "coordinates": [
+      "block_dx_over_512",
+      "block_dy_over_512",
+      "wrapped_block_dtheta_over_pi"
+    ],
+    "definition": "sqrt(sum_j weight_j * (delta_j - target_j)^2 / sum_j weight_j)",
+    "targets": [
+      {
+        "name": "zero",
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "east",
+        "value": [
+          0.1,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "west",
+        "value": [
+          -0.1,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "north",
+        "value": [
+          0.0,
+          0.1,
+          0.0
+        ]
+      },
+      {
+        "name": "south",
+        "value": [
+          0.0,
+          -0.1,
+          0.0
+        ]
+      },
+      {
+        "name": "ne",
+        "value": [
+          0.08,
+          0.08,
+          0.0
+        ]
+      },
+      {
+        "name": "nw",
+        "value": [
+          -0.08,
+          0.08,
+          0.0
+        ]
+      },
+      {
+        "name": "se",
+        "value": [
+          0.08,
+          -0.08,
+          0.0
+        ]
+      },
+      {
+        "name": "sw",
+        "value": [
+          -0.08,
+          -0.08,
+          0.0
+        ]
+      },
+      {
+        "name": "rot_pos",
+        "value": [
+          0.0,
+          0.0,
+          0.15
+        ]
+      },
+      {
+        "name": "rot_neg",
+        "value": [
+          0.0,
+          0.0,
+          -0.15
+        ]
+      },
+      {
+        "name": "east_rot",
+        "value": [
+          0.08,
+          0.0,
+          0.15
+        ]
+      },
+      {
+        "name": "west_rot",
+        "value": [
+          -0.08,
+          0.0,
+          -0.15
+        ]
+      }
+    ],
+    "task_count": 39,
+    "tie_tolerance": 1e-12,
+    "weight_profiles": [
+      {
+        "name": "balanced",
+        "value": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "position",
+        "value": [
+          1.0,
+          1.0,
+          0.1
+        ]
+      },
+      {
+        "name": "orientation",
+        "value": [
+          0.25,
+          0.25,
+          2.0
+        ]
+      }
+    ]
+  },
+  "environment": {
+    "candidate_count": 5,
+    "generation_base_seeds": [
+      1510003,
+      1520003,
+      1530003,
+      1540003,
+      1550003,
+      1560003,
+      1570003,
+      1580003,
+      1590003,
+      1600003
+    ],
+    "global_id_offset": 10000000,
+    "horizon": 30,
+    "id": "gym_pusht/PushT-v0",
+    "radius": 80.0,
+    "render_contract": {
+      "action_overlay_included": false,
+      "height": 512,
+      "interface": "PushTEnv._render(visualize=False)",
+      "width": 512
+    },
+    "shards": 10,
+    "states_per_shard": 800,
+    "total_states": 8000
+  },
+  "expected_prepared_shards": [
+    "v106_prepared_shard0.npz",
+    "v106_prepared_shard1.npz",
+    "v106_prepared_shard2.npz",
+    "v106_prepared_shard3.npz",
+    "v106_prepared_shard4.npz",
+    "v106_prepared_shard5.npz",
+    "v106_prepared_shard6.npz",
+    "v106_prepared_shard7.npz",
+    "v106_prepared_shard8.npz",
+    "v106_prepared_shard9.npz"
+  ],
+  "fresh_physical_bank": true,
+  "frozen_calibrators": {
+    "full_seed2026": {
+      "alpha": 1.0,
+      "fit_rows": 900,
+      "fit_states": 180,
+      "path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/calibrators/v101f_frozen_calibrator_full_seed2026.joblib",
+      "sha256": "a6652b9bb0a4df9844bf8eb80991dc0caceee02cd010d6efb3e998aefe338b6b",
+      "source_prediction_sha256": "b0b32b68d781fa656497dd142b76dd55c361cb342c6e7dbcccc3f473c9a4f05a"
+    },
+    "full_seed314159": {
+      "alpha": 1.0,
+      "fit_rows": 900,
+      "fit_states": 180,
+      "path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/calibrators/v101f_frozen_calibrator_full_seed314159.joblib",
+      "sha256": "13d0997befb8998b31291dee0a10ca361f9befbc13722730b00cafec2dec943a",
+      "source_prediction_sha256": "9702eec671aff0b60045aef3e2f5ff3a3c800b7a5f13d08d1fa84ad1e147e1b9"
+    },
+    "full_seed92002": {
+      "alpha": 1.0,
+      "fit_rows": 900,
+      "fit_states": 180,
+      "path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/calibrators/v101f_frozen_calibrator_full_seed92002.joblib",
+      "sha256": "2071c3175d3e3115ab7365a0ee03ea374ef25d5af202b18178f84a8d557c4c1d",
+      "source_prediction_sha256": "c215b73d42fba4f1401cb48fd45f520cdad3d8d595054fe54f590e191650dc05"
+    },
+    "medium_seed2026": {
+      "alpha": 1.0,
+      "fit_rows": 900,
+      "fit_states": 180,
+      "path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/calibrators/v101f_frozen_calibrator_medium_seed2026.joblib",
+      "sha256": "139e81a3ce73e49b49e65fa2777104c11d5a21ac68026d7beb81dd489091731b",
+      "source_prediction_sha256": "942886f25d23ea4333d8ac420b9fc540b6544b8878a7cdf10f7afcbbe16e78ad"
+    },
+    "medium_seed314159": {
+      "alpha": 1.0,
+      "fit_rows": 900,
+      "fit_states": 180,
+      "path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/calibrators/v101f_frozen_calibrator_medium_seed314159.joblib",
+      "sha256": "d889a5e3c66da4909e00b70cabe08323183db6da9a672789700b29a919d34c3c",
+      "source_prediction_sha256": "a16c7f517e6f9a22eee0874f04dd20db232861bde206e2cea515ff1967be0fe5"
+    },
+    "medium_seed92002": {
+      "alpha": 1.0,
+      "fit_rows": 900,
+      "fit_states": 180,
+      "path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/calibrators/v101f_frozen_calibrator_medium_seed92002.joblib",
+      "sha256": "071f1d359cb662ec7b1757ec5263cd57b9651c66054b94d0d4ce9998183e4c3d",
+      "source_prediction_sha256": "af8d6cc3c0fd520ea5c15522e7cffc010911ee6015ee934f3d5db0e6e649cc6f"
+    }
+  },
+  "frozen_models": {
+    "full_seed2026": {
+      "candidate_bank_latency_ms_median": 0.34288596361875534,
+      "checkpoint": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_full_seed2026.pt",
+      "checkpoint_sha256": "35ba39f7a984e753b33122a9adfdd06dc1daad4173af30d341a5c0c0b7e017a1",
+      "forward_macs_per_candidate": 590848,
+      "metadata": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_full_seed2026.json",
+      "metadata_sha256": "548dc88567853bc7e2e9b054477a45bad9e2899bb7d6680c021695f6f9bf1416",
+      "parameter_count": 592448
+    },
+    "full_seed314159": {
+      "candidate_bank_latency_ms_median": 0.3446829505264759,
+      "checkpoint": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_full_seed314159.pt",
+      "checkpoint_sha256": "26521321e4fc829f2a72541006b86094ef732f5d8daa6b0ab70d983552a373a7",
+      "forward_macs_per_candidate": 590848,
+      "metadata": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_full_seed314159.json",
+      "metadata_sha256": "f74a8d76d764c9bd251755f5aec3e9398ce5ae0ff3b1f79074edbfcf71e4cab3",
+      "parameter_count": 592448
+    },
+    "full_seed92002": {
+      "candidate_bank_latency_ms_median": 0.3393300576135516,
+      "checkpoint": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_full_seed92002.pt",
+      "checkpoint_sha256": "d5d71f1df877e29f81b59d3973de499e9f9b1dd3c0e30810f76a051f8ce219ed",
+      "forward_macs_per_candidate": 590848,
+      "metadata": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_full_seed92002.json",
+      "metadata_sha256": "1056e27315fb76f9ebd4a341ef5d5c44c447fc096e977497d684185e2e967392",
+      "parameter_count": 592448
+    },
+    "medium_seed2026": {
+      "candidate_bank_latency_ms_median": 0.2592140808701515,
+      "checkpoint": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_medium_seed2026.pt",
+      "checkpoint_sha256": "587dad80d6502d08d901a22135fa46352177bf33b164c3aff8464130e3af9fc2",
+      "forward_macs_per_candidate": 98816,
+      "metadata": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_medium_seed2026.json",
+      "metadata_sha256": "8e952955f19558699911e770da307e1e7ca6adadce15d5bf97b42a7d958caeb9",
+      "parameter_count": 99392
+    },
+    "medium_seed314159": {
+      "candidate_bank_latency_ms_median": 0.260384869761765,
+      "checkpoint": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_medium_seed314159.pt",
+      "checkpoint_sha256": "34377ded567611cc39efd80a367ab67dec8afb1743aecebd0a176a9ed0ad3dd5",
+      "forward_macs_per_candidate": 98816,
+      "metadata": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_medium_seed314159.json",
+      "metadata_sha256": "e3ad941ee689bf4ec58e3664eb81cc87f18b45d4960742f77032bcc0606bbf7e",
+      "parameter_count": 99392
+    },
+    "medium_seed92002": {
+      "candidate_bank_latency_ms_median": 0.25831256061792374,
+      "checkpoint": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_medium_seed92002.pt",
+      "checkpoint_sha256": "10c623945a6607b1cc6df95f59fc319898cfdb4d16c17c93d150e336108c5705",
+      "forward_macs_per_candidate": 98816,
+      "metadata": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/predictors/v101c_predictor_medium_seed92002.json",
+      "metadata_sha256": "ee90e16f8017e9d4da4e1e107d5d474e39d5b89588c663ec9eb69a1689b8349f",
+      "parameter_count": 99392
+    }
+  },
+  "inference": {
+    "bootstrap_repetitions": 20000,
+    "bootstrap_seed": 10603,
+    "crossed_seed_state_sensitivity_repair": {
+      "primary_inference_affected": false,
+      "state_resampling": "one shared state-index vector across sampled seed positions",
+      "status": "post_audit_corrected"
+    },
+    "exact_count_randomization_repetitions": 5000,
+    "exact_count_randomization_seed": 10604,
+    "hierarchical_seed_resampling_is_secondary": true,
+    "matched_count_benchmark_is_inferential": false,
+    "model_seeds_are_fixed_design_replicates": true,
+    "multiple_comparison_control": {
+      "comparisons": 5,
+      "familywise_alpha": 0.05,
+      "method": "Bonferroni one-sided upper percentile bound",
+      "upper_quantile": 0.99
+    },
+    "primary_cluster_unit": "physical_global_state"
+  },
+  "latency": {
+    "benchmark_threads": 1,
+    "conservative_additive_accounting": true,
+    "full_model_ms": {
+      "2026": 0.34288596361875534,
+      "314159": 0.3446829505264759,
+      "92002": 0.3393300576135516
+    },
+    "medium_model_ms": {
+      "2026": 0.2592140808701515,
+      "314159": 0.260384869761765,
+      "92002": 0.25831256061792374
+    },
+    "primary_statistic": "median_of_round_medians",
+    "primary_unit": "milliseconds per one physical-state, one downstream-task, five-action decision query",
+    "repeats_per_round": 1000,
+    "rounds": 7,
+    "sample_queries": 512,
+    "sensitivity_statistic": "p90_of_all_queries",
+    "warmup": 200,
+    "world_model_source": "Hash-locked V101F candidate-bank latency medians; V106 measures all task, decision, margin, and router overheads before audit access.",
+    "world_model_unit": "milliseconds per one physical-state, five-action prediction query"
+  },
+  "model_pair": [
+    "medium",
+    "full"
+  ],
+  "policies": {
+    "candidate": "PushT prediction-interface sequential router",
+    "exploratory_reference": "Oracle sequential",
+    "primary_references": [
+      "Fixed Medium",
+      "Fixed Full",
+      "Task-only input router",
+      "Margin sequential matched-rate",
+      "Expected random input matched-rate"
+    ]
+  },
+  "post_audit_release_normalization": {
+    "changes": "semantic normalization of matched-count diagnostic and corrected secondary crossed sensitivity; no primary result changed",
+    "historical_exact_copy": "provenance/v106/original_compact_artifacts/v106_protocol.json",
+    "historical_protocol_sha256": "0603397fcf3b5209ac2a92a70a334b23c61083b5ff7fc87e5972e52737bf514d"
+  },
+  "protocol_name": "v106_pusht_sealed_confirmation",
+  "protocol_status": "V106_PROTOCOL_SEALED_BEFORE_FRESH_PUSHT_OUTCOMES",
+  "representation": {
+    "crop_size_world": 320,
+    "dino_checkpoint_path": "/lustre/home/u10010019/.cache/torch/hub/checkpoints/dinov2_vits14_pretrain.pth",
+    "dino_checkpoint_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "dino_model": "dinov2_vits14",
+    "dino_python_source_files": 157,
+    "dino_python_tree_sha256": "5ff540a67ea836178d641ddb79fde8c9245e37333a08e53b63f4568df53d59df",
+    "dino_repository_path": "/lustre/home/u10010019/.cache/torch/hub/facebookresearch_dinov2_main",
+    "offline_local_source_required": true,
+    "pca_components": 64,
+    "pca_path": "outputs/v101_decision_theoretic_routing/v101c_pusht_latent_pilot/v101c_dino_pca.joblib",
+    "pca_sha256": "7e434d0a7c7eec81997e820d59bd933ba63b9aa41334696b0df9beba4bcdd67f",
+    "pool_grid": 4,
+    "resize": 224,
+    "torch_home": "/lustre/home/u10010019/.cache/torch"
+  },
+  "router": {
+    "activation": "relu",
+    "alpha": 0.0001,
+    "batch_size": 1024,
+    "early_stopping": false,
+    "hidden_layer_sizes": [
+      128,
+      64
+    ],
+    "learning_rate_init": 0.001,
+    "max_iter": 80,
+    "random_seed": 10602,
+    "score_implementation": "numpy_float32",
+    "solver": "adam",
+    "threshold_comparison": "strict_greater_than",
+    "threshold_quantiles": 101,
+    "type": "mlp_regressor"
+  },
+  "runtime_at_protocol_freeze": {
+    "Pillow": "12.2.0",
+    "gym-pusht": "0.1.6",
+    "gymnasium": "1.3.0",
+    "joblib": "1.5.3",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "pymunk": "6.11.1",
+    "python": "3.10.20",
+    "scikit-learn": "1.7.2",
+    "torch": "2.6.0+cu124"
+  },
+  "scientific_role": "Fresh, outcome-sealed PushT confirmation of decision-interface routing. V101F world models, DINO/PCA, physical calibrators, actions, horizon, task family, router architecture, primary lambda, latency unit, references, inference, and gates are frozen before every V106 physical outcome.",
+  "software": {
+    "compute_nodes_require_offline_assets": true,
+    "required_exact": {
+      "gym-pusht": "0.1.6",
+      "pymunk": "6.11.1"
+    },
+    "thread_count_for_scientific_latency": 1
+  },
+  "source": {
+    "candidate_count": 5,
+    "dataset": "Fresh V106 PushT five-action bank",
+    "split_code_map": {
+      "0": "train",
+      "1": "validation",
+      "2": "audit"
+    },
+    "upstream_assets": "Hash-locked V101F DINO/PCA, Medium/Full predictors, and physical calibrators"
+  },
+  "source_lineage": {
+    "architecture_and_estimand_selected_during_development": true,
+    "fresh_state_overlap_with_v101c_v101f": 0,
+    "prior_reset_seed_scan_path": "reports/v106_pusht_sealed_confirmation/frozen/v106_prior_reset_seed_scan.csv",
+    "prior_reset_seed_scan_sha256": "578a6b45d30cf94e31d08094ed17887b986c9ec578d842f28b530c87508b029f",
+    "prior_reset_seed_scan_summary": {
+      "candidate_artifacts_scanned": 100,
+      "readable_reset_seed_artifacts": 21,
+      "scan_errors": 0,
+      "unique_prior_reset_seeds_observed": 6000,
+      "v106_overlap_count": 0
+    },
+    "router_or_threshold_transferred_from_v105b": false,
+    "v101f_protocol_path": "reports/v101_decision_theoretic_routing/v101f_large_router_dataset/frozen/v101f_protocol.json",
+    "v101f_protocol_sha256": "f55926906f305d70908810e059d13ec350d7ebbde4dc957ae072f38800e0f979",
+    "v106_design_sha256": "b5138c4535f07521671f86f2ddcc34f0c8a46cf976daf3e0454a42476533e238"
+  },
+  "split": {
+    "audit_shards": [
+      8,
+      9
+    ],
+    "counts": {
+      "audit": 1600,
+      "train": 5200,
+      "validation": 1200
+    },
+    "development_shards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "path": "reports/v106_pusht_sealed_confirmation/frozen/v106_state_split.csv",
+    "seed": 10601,
+    "selection_rule": "Train and validation are assigned by a deterministic permutation within development shards 0-7. Shards 8-9 are audit-only and are never opened by the router-sealing job.",
+    "sha256": "653773b8b7db872146d98015ffeac0845ab5de8bc8f54fb24c81f1980cd8c201"
+  },
+  "stage": "confirmation",
+  "status": "V106_PROTOCOL_SEALED_BEFORE_FRESH_PUSHT_OUTCOMES",
+  "success_rule": {
+    "global_primary": "All five state-clustered candidate-minus-reference Bonferroni one-sided upper bounds are below zero at lambda=0.002.",
+    "overall": "The primary inferential family, seed replication, weight-profile robustness, and the separate descriptive matched-count criterion all pass.",
+    "randomization": "Descriptive matched-count criterion: none of 5,000 prespecified random-input assignments has cost no larger than the candidate; report the plus-one tail fraction without p-value interpretation.",
+    "seed_replication": "Candidate-minus-reference point estimates are negative against Fixed Medium and Expected random input matched-rate on all three frozen upstream model seeds.",
+    "weight_profile_robustness": "Against Fixed Medium and Expected random input matched-rate, every weight-profile point estimate is negative and no state-clustered two-sided 95% interval lies entirely above zero."
+  },
+  "upstream_model_seeds": [
+    92002,
+    2026,
+    314159
+  ],
+  "utility": {
+    "definition": "decision_regret + lambda * latency_ms",
+    "lambda_grid": [
+      0.0,
+      0.002,
+      0.005,
+      0.01,
+      0.025,
+      0.05
+    ],
+    "primary_lambda": 0.002
+  }
+}

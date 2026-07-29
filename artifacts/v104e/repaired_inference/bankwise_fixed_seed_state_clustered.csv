@@ -1,0 +1,25 @@
+bank,candidate,reference,lambda,cost_difference_candidate_minus_reference,bootstrap_replicates,ci95_low,ci95_high,candidate_significantly_better_95,candidate_significantly_worse_95,inference_method
+confirm_id_h36_v12_b2,Prediction-interface sequential router,Fixed Medium,0.002,-0.0006294117603719361,10000,-0.0007447932594315055,-0.0005187401115520153,True,False,fixed-seed state-clustered bootstrap
+confirm_id_h36_v12_b2,Prediction-interface sequential router,Fixed Full,0.002,-0.00088268986772191,10000,-0.0010527391293770015,-0.0007134430850878428,True,False,fixed-seed state-clustered bootstrap
+confirm_id_h36_v12_b2,Prediction-interface sequential router,Margin sequential matched-rate,0.002,0.0002444030621357036,10000,0.00015170390802309649,0.00033643171098721045,False,True,fixed-seed state-clustered bootstrap
+confirm_id_h36_v12_b2,Prediction-interface sequential router,Random input matched-rate,0.002,-0.0006429812373788026,10000,-0.0007447364046069785,-0.0005438513390122438,True,False,fixed-seed state-clustered bootstrap
+confirm_h54_v12_b3,Prediction-interface sequential router,Fixed Medium,0.002,-0.002742392364718569,10000,-0.002954109402432612,-0.0025367468388317075,True,False,fixed-seed state-clustered bootstrap
+confirm_h54_v12_b3,Prediction-interface sequential router,Fixed Full,0.002,-0.0030678249765953504,10000,-0.003319700625491131,-0.0028235213022805117,True,False,fixed-seed state-clustered bootstrap
+confirm_h54_v12_b3,Prediction-interface sequential router,Margin sequential matched-rate,0.002,-0.0016454151654114225,10000,-0.0018113509215973232,-0.001480544438400213,True,False,fixed-seed state-clustered bootstrap
+confirm_h54_v12_b3,Prediction-interface sequential router,Random input matched-rate,0.002,-0.0027828972649950275,10000,-0.0029693745161003746,-0.0026018641578940517,True,False,fixed-seed state-clustered bootstrap
+confirm_h96_v12_b3,Prediction-interface sequential router,Fixed Medium,0.002,-0.007368228750312129,10000,-0.007914203863348061,-0.00685234265891755,True,False,fixed-seed state-clustered bootstrap
+confirm_h96_v12_b3,Prediction-interface sequential router,Fixed Full,0.002,-0.00748622754709383,10000,-0.007960101879703023,-0.007020060037588968,True,False,fixed-seed state-clustered bootstrap
+confirm_h96_v12_b3,Prediction-interface sequential router,Margin sequential matched-rate,0.002,-0.006753898205166265,10000,-0.007172584816272375,-0.006352709254027765,True,False,fixed-seed state-clustered bootstrap
+confirm_h96_v12_b3,Prediction-interface sequential router,Random input matched-rate,0.002,-0.007329503613680323,10000,-0.007752412208404647,-0.006924194360173465,True,False,fixed-seed state-clustered bootstrap
+confirm_h36_v21_b2,Prediction-interface sequential router,Fixed Medium,0.002,-0.005573282949427023,10000,-0.005896481462735459,-0.005247845971096819,True,False,fixed-seed state-clustered bootstrap
+confirm_h36_v21_b2,Prediction-interface sequential router,Fixed Full,0.002,-0.005489297576856185,10000,-0.005808144459532544,-0.005174993172587265,True,False,fixed-seed state-clustered bootstrap
+confirm_h36_v21_b2,Prediction-interface sequential router,Margin sequential matched-rate,0.002,-0.004909486085934971,10000,-0.005155457700735308,-0.0046571840904843734,True,False,fixed-seed state-clustered bootstrap
+confirm_h36_v21_b2,Prediction-interface sequential router,Random input matched-rate,0.002,-0.005475615194916497,10000,-0.005748639709642476,-0.005196823302281979,True,False,fixed-seed state-clustered bootstrap
+confirm_h36_v12_b1,Prediction-interface sequential router,Fixed Medium,0.002,-0.0006110869674472687,10000,-0.0007399692805238777,-0.0004829512178361147,True,False,fixed-seed state-clustered bootstrap
+confirm_h36_v12_b1,Prediction-interface sequential router,Fixed Full,0.002,-0.00018726742634607189,10000,-0.0004993277123507286,0.00012458586486109282,False,False,fixed-seed state-clustered bootstrap
+confirm_h36_v12_b1,Prediction-interface sequential router,Margin sequential matched-rate,0.002,0.0007882481171933229,10000,0.0006380144785531769,0.0009394151791686843,False,True,fixed-seed state-clustered bootstrap
+confirm_h36_v12_b1,Prediction-interface sequential router,Random input matched-rate,0.002,-0.0005475632696131815,10000,-0.0006632098496093487,-0.0004313488710378226,True,False,fixed-seed state-clustered bootstrap
+confirm_h60_v15_b3,Prediction-interface sequential router,Fixed Medium,0.002,-0.005139373917782287,10000,-0.005511497199022116,-0.004783464845905988,True,False,fixed-seed state-clustered bootstrap
+confirm_h60_v15_b3,Prediction-interface sequential router,Fixed Full,0.002,-0.005364578199929545,10000,-0.005730941044457405,-0.005008834219671072,True,False,fixed-seed state-clustered bootstrap
+confirm_h60_v15_b3,Prediction-interface sequential router,Margin sequential matched-rate,0.002,-0.004522581366584149,10000,-0.00481580429545804,-0.004235598968702593,True,False,fixed-seed state-clustered bootstrap
+confirm_h60_v15_b3,Prediction-interface sequential router,Random input matched-rate,0.002,-0.005231783125095032,10000,-0.005545437723326024,-0.0049294032473103586,True,False,fixed-seed state-clustered bootstrap

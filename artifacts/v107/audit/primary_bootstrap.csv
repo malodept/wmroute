@@ -1,0 +1,2 @@
+comparison,lambda,states,tasks,fixed_checkpoint_pairs,bootstrap_repetitions,bootstrap_seed,point,q025,q975,one_sided_q95,primary_gate_pass
+prediction_minus_dino_action_pca43,0.002,1600,39,3,20000,107031,-0.0025493366853158186,-0.0028669004993478442,-0.002238474267725135,-0.002286383099371905,True

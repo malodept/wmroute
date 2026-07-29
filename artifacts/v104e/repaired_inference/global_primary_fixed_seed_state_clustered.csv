@@ -1,0 +1,5 @@
+candidate,reference,lambda,cost_difference_candidate_minus_reference,ci95_low,ci95_high,bonferroni_adjusted_one_sided_upper,adjusted_upper_below_zero,bootstrap_replicates,inference_method
+Prediction-interface sequential router,Fixed Medium,0.002,-0.0036772961183432215,-0.0038052888057831208,-0.003552961609822795,-0.0035348171407691056,True,10000,fixed-seed state-clustered stratified bootstrap
+Prediction-interface sequential router,Fixed Full,0.002,-0.003746314265757141,-0.0038802012795448007,-0.003612663548373349,-0.003596931846839255,True,10000,fixed-seed state-clustered stratified bootstrap
+Prediction-interface sequential router,Margin sequential matched-rate,0.002,-0.0027997882739613095,-0.002902090184563829,-0.0026983544923598916,-0.002685068801750325,True,10000,fixed-seed state-clustered stratified bootstrap
+Prediction-interface sequential router,Random input matched-rate,0.002,-0.003668390617613133,-0.0037727268824755424,-0.0035647977213994673,-0.0035497434960840646,True,10000,fixed-seed state-clustered stratified bootstrap
